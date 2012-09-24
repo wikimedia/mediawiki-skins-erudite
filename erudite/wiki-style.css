@@ -1,0 +1,488 @@
+/*
+ * Modifications to erudite.css to make it play nicely with
+ * MediaWiki.
+ */
+
+/* Background images: use relative urls, and enable @embed */
+body.baseline {
+	/* @embed */
+	background-image: url(skins/erudite/images/body-bg.png);
+}
+
+#header-wrap {
+	/* @embed */
+	background-image: url(skins/erudite/images/stripes.png);
+}
+
+.entry-content div hr, .hr {
+	/* @embed */
+	background-image: url(skins/erudite/images/fleuron.png);
+}
+
+.entry-content div > p:first-child:first-letter {
+	/* @embed */
+	background: #555 url(skins/erudite/images/stripes.png) repeat;
+}
+
+/* Content is in .entry-content div, not just entry-content */
+body.ns-subject .entry-content div > p:first-child:first-letter {
+	font-size: 4.5em;
+	line-height: .65em;
+}
+
+.entry-content div > p:first-child:first-letter {
+	font-size: 3em;
+	float: left;
+	color: #fff;
+	margin: 0.05em 0.1em 0 0;
+	padding: 0.1em;
+	line-height: 0.7em;
+}
+/* Webkit + Hoefler = Odd leading. Or at least different. */
+body.webkit.set-in-hoeflertext .entry-content div > p:first-child:first-letter {
+	padding: 0.2em 0.1em 0;
+}
+
+/* For MW */
+#content .printfooter {
+	display: none;
+}
+
+#header-wrap, #footer-wrap {
+	min-width: 960px;
+}
+
+a.new:link {
+	color: red;
+}
+
+a.new:visited {
+	color: red;
+}
+
+span.editsection {
+	font-size: 10pt;
+}
+
+body.ns-subject #content {
+	overflow: visible;
+}
+
+/* CSS placed here will be applied to all skins */
+
+.toc, #toc {
+	display: none;
+}
+
+.reference {
+	font-size: 8pt;
+}
+
+#content-container {
+	margin-bottom: -3px;
+}
+
+
+#bodyContent > p {
+	font-size: 10pt;
+	line-height: 20px;
+	text-indent: 20pt;
+}
+
+#bodyContent > ul > li {
+	margin-left: 10pt;
+}
+
+#content {
+	overflow: auto;
+}
+
+#content {
+	width: 70em; 
+	padding-left: 6em; 
+	padding-top: 2.4em; 
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	clear: both;
+}
+
+div.entry-content li {
+	margin-left: 30px;
+}
+
+span.entry-sub-title {
+	margin-left: 40px;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+h3 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+/* make the list of references look smaller and highlight clicked reference in blue */
+ol.references {
+	font-size: 80%;
+}
+
+.references-small {
+	font-size: 70%;
+}
+
+ol.references > li:target {
+	background-color: #ddeeff;
+}
+
+sup.reference:target {
+	background-color: #ddeeff;
+}
+
+/* Images */
+div.floatright, table.floatright {
+	clear: right;
+	float: right;
+	position: relative;
+	margin: 0 0 .5em .5em;
+	border: 0;
+}
+
+div.floatright p {
+	font-style: italic;
+}
+
+div.floatleft, table.floatleft {
+	float: left;
+	clear: left;
+	position: relative;
+	margin: 0 .5em .5em 0;
+	border: 0;
+}
+
+div.floatleft p {
+	font-style: italic;
+}
+
+div.thumb {
+	margin-bottom: .5em;
+	border-style: solid;
+	border-color: #FAFAFA;
+	width: auto;
+	background-color: transparent;
+}
+
+div.thumbinner {
+	border: 1px solid #ccc;
+	padding: 3px !important;
+	background-color: #f9f9f9;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
+}
+
+html .thumbimage {
+	border: 1px solid #ccc;
+}
+
+html .thumbcaption {
+	border: none;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 3px !important;
+	font-size: 94%;
+}
+
+div.magnify {
+	float: right;
+	border: none !important;
+	background: none !important;
+}
+
+div.magnify a, div.magnify img {
+	display: block;
+	border: none !important;
+	background: none !important;
+}
+
+div.tright {
+	clear: right;
+	float: right;
+	border-width: .5em 0 .8em 1.4em;
+}
+
+div.tleft {
+	float: left;
+	clear: left;
+	margin-right: .5em;
+	border-width: .5em 1.4em .8em 0;
+}
+
+img.thumbborder {
+	border: 1px solid #dddddd;
+}
+
+.hiddenStructure {
+	display: none;
+}
+
+table.gallery {
+	background-color: #FAFAFA;
+}
+
+table.gallery td {
+	background-color: #FAFAFA;
+	border: 2px solid #FAFAFA;
+}
+
+/* Category pages */
+div.entry-content div#mw-pages table tbody tr td h3 {
+	font-size: 15pt;
+}
+
+div.entry-content div#mw-subcategories table tbody tr td h3 {
+	font-size: 15pt;
+}
+
+div#content-container.post div.entry-content div#mw-pages table tbody tr td ul {
+	font-size: 6pt;
+}
+
+div#content-container.post div.entry-content div#mw-subcategories table tbody tr td ul {
+	font-size: 6pt;
+}
+
+
+div.mw-spcontent form {
+	margin-bottom: 10pt;
+}
+
+/* Protect pages */
+form#mw-Protect-Form fieldset table {
+	font-size: 8pt;
+}
+
+/* Special Pages */
+table.mw-specialpages-table tbody tr td ul {
+	font-size: 6pt;
+}
+
+/* Category Links */
+#nav-below {
+	width: 80em;
+	height: auto;
+	position: relative;
+	bottom: 0em;
+	left: 0em;
+}
+
+#nav-below div {
+	max-width: 80em;
+}
+
+#mw-normal-catlinks > a {
+	padding-left: 0.5em;
+}
+
+#nav-below a {
+	display: inline;
+}
+
+.catlinks li:first-child {
+	border-left: 1px solid #AAA;
+}
+
+.catlinks li {
+	margin: 0em 0.25em;
+}
+
+/* Messages */
+
+.message {
+	margin: 0 auto;
+	margin-top: -20px;
+	position: relative;
+	width: 960px;
+	color: #fff;
+	background-color: #666666;
+	font-size: 13pt;
+	line-height: 36pt;
+	text-indent: 20px;
+}
+
+.message a:link {
+	color: #DFDFDF;
+}
+
+.message a:visited {
+	color: #DFDFDF;
+}
+
+
+/* Sidebars */
+/* System Sidebar */
+div.system-sidebar {
+	width: 225px; 
+	margin: 10px; 
+	border: 1px solid #AAAAAA;
+}
+
+div.system-sidebar-header {
+	text-align: center; 
+	font-size: 10pt; 
+	background-color: #666666; 
+	color: #fff; 
+	padding: 6px;
+}
+
+div.system-sidebar-header h3 span.mw-headline a {
+	color: #fff; 
+}
+
+div.system-sidebar-header h3 {
+	margin-top: 0px;
+	line-height: 125%;
+	font-weight: 300;
+}
+
+div.system-sidebar-body {
+	padding: 6px; 
+	text-indent: 0pt;Ê
+	word-spacing: 0pt;
+	font-size: 10pt;
+}
+
+div.system-sidebar-body ul li {
+	list-style: disc outside;
+}
+
+div.system-sidebar-body div.hr {
+	margin-bottom: 0px;
+}
+
+div.system-sidebar-body b {
+	text-transform: uppercase;
+}
+	
+div.system-sidebar-body dl {
+	text-align: center;
+	text-transform: uppercase; 
+	font-weight: bold;
+}
+
+div.system-sidebar-body li {
+	margin-bottom: 5px;
+	font-size: 10pt;
+}
+
+div.system-sidebar-body p {
+	font-size: 10pt;
+}
+
+/* Basic Sidebar */
+div.basic-sidebar {
+	width: 240px; 
+	margin: 10px; 
+	border: 1px solid #AAAAAA;
+}
+
+div.basic-sidebar-header {
+	text-align: center; 
+	font-size: 10pt; 
+	background-color: #666666; 
+	color: #fff; 
+	padding: 6px;
+}
+
+div.basic-sidebar-header h3 {
+	line-height: 125%;
+	color: #fff;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-top: 0px;
+}
+
+div.basic-sidebar-header h3 span.mw-headline a {
+	color: #fff; 
+}
+
+div.basic-sidebar-body {
+	padding: 6px;
+}
+
+div.basic-sidebar-body ul li {
+	list-style: disc outside;
+}
+
+div.basic-sidebar-body li {
+	margin-bottom: 5px;
+	margin-left: 25px;
+	font-size: 10pt;
+}
+
+div.basic-sidebar-body h3 {
+	text-align: center;
+}
+
+
+#menu li.rollover {
+	display: none;
+	position: absolute;
+	background: none repeat scroll 0 0 rgba(50, 50, 50, 0.7);
+	z-index: 1000;
+	float: none;
+	margin-left: none;
+	padding: 7px;
+	font-size: 1.2em;
+	border-left: 1px solid #666;
+	margin-left: 275px;
+	height: 15px;
+	width: 100px;
+}
+
+#menu li#cat {
+	margin-top: 23px;
+	border-bottom: 1px solid #666666;
+}
+
+#menu li#ig {
+	margin-top: 53px;
+	border-bottom: 1px solid #666666;
+}
+
+#menu li#ran {
+	margin-top: 83px;
+	border-bottom: 1px solid #666666;
+}
+
+#menu li#cont {
+	margin-top: 113px;
+}
+
+#menu ul#ref:hover li#cat, #menu ul#ref:hover li#ig, #menu ul#ref:hover li#ran, #menu ul#ref:hover li#cont {
+	display: block;
+}
+
+
+.mw-search-formheader div.search-types ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+div.searchresult {
+	margin-top: 15px;
+}
+
+.mw-jump {
+	display: none;
+}
+
+img#logo {
+	float: right;
+}
+
+/* make meta area narrower */
+.entry-meta {
+	right: -20em;
+	width: 10em;
+}

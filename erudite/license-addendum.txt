@@ -1,0 +1,3 @@
+Erudite for MediaWiki was created by Colin Andrew Ferm based off the original Erudite WP theme.
+
+All terms of the original license remain.

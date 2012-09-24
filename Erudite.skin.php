@@ -1,0 +1,262 @@
+<?php
+/**
+ * Erudite skin
+ * Based off The Erudite skin for Wordpress.
+ *
+ * @file
+ * @ingroup Skins
+ */
+
+class SkinErudite extends SkinTemplate {
+
+	var $skinname = 'erudite', $stylename = 'erudite',
+		$template = 'EruditeTemplate', $useHeadElement = true;
+
+	/**
+	 * @param $out OutputPage object
+	 */
+	function setupSkinUserCss( OutputPage $out ) {
+		parent::setupSkinUserCss( $out );
+		$out->addModuleStyles( "skins.erudite" );
+		/* some versions of ie need css workarounds */
+		foreach(array(6,7,8) as $n) {
+			$out->addHeadItem('cssie'.$n, '<!--[if IE '.$n.']><link rel="stylesheet" href="skins/erudite/ie'.$n.'.css" /><![endif]-->');
+		}
+	}
+}
+
+class EruditeTemplate extends BaseTemplate {
+	private function newpages() {
+		$tables = array('recentchanges');
+		$fields = array('rc_title');
+		$conds  = array('rc_type' => RC_NEW, 'rc_namespace' => 0);
+		$options = array('ORDER BY' => 'rc_timestamp DESC', 'LIMIT' => 5);
+		$join_conds = array();
+
+		$mDb = wfGetDB(DB_SLAVE);
+
+		$res = $mDb->select($tables, $fields, $conds, __METHOD__, $options, $join_conds);
+
+		$pgs = array();
+		foreach($res->result as $i) {
+			$name = str_replace('_', ' ', $i['rc_title']);
+			$url = $this->getSkin()->makeUrl($i['rc_title']);
+			$pgs[] = array('name' => $name, 'url' => $url);
+		}
+
+		return $pgs;
+	}
+
+	/**
+	 * Template filter callback for this skin.
+	 * Takes an associative array of data set from a SkinTemplate-based
+	 * class, and a wrapper for MediaWiki's localization database, and
+	 * outputs a formatted page.
+	 */
+	public function execute() {
+		// suppress warnings to prevent notices about missing indexes in $this->data
+		wfSuppressWarnings();
+
+		$this->html( 'headelement' );
+
+		global $wgSitename;
+
+		?>
+<div id="wrapper" class="hfeed">
+	
+	<div id="header-wrap">
+		<div id="header" role="banner">
+			<?php echo '<img id="logo" src="' .htmlspecialchars($this->data['logopath']). '" alt="" />'; ?>
+			<h1 id="blog-title"><span><a href="<?php $this->text('scriptpath'); ?>/" title="<?php echo($wgSitename); ?>" rel="home"><?php echo($wgSitename); ?></a></span></h1>
+			<div id="blog-description"><?php $this->msg('tagline') ?></div>
+		</div><!-- #header -->
+
+		<div id="access" role="navigation">
+			<?php if($this->data['showjumplinks']) { ?>
+				<div class="mw-jump">
+					<?php $this->msg( 'jumpto' ) ?> <a href="#content"><?php $this->msg( 'jumptocontent' ) ?></a>,
+					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
+				</div>
+			<?php } ?>
+			<div id="menu">
+
+			<ul id="menu-urs" class="menu">
+				<?php foreach( $this->data['sidebar']['navigation'] as $key => $val ) { ?>
+					<li id="menu-item-<?php echo Sanitizer::escapeId( $val['id'] ) ?>" class="menu-item menu-item-type-post_type menu-item">
+						<a href="<?php echo htmlspecialchars( $val['href'] ) ?>"><?php echo htmlspecialchars( $val['text'] ) ?></a>
+					</li>
+				<?php } ?>
+			</ul>
+		</div>
+		</div><!-- #access -->
+
+	</div><!-- #header-wrap -->
+
+	<!-- MESSAGES -->
+	<div id="mw-js-message" style="display:none;"></div>
+	<?php
+		foreach(array('newtalk','sitenotice','subtitle','undelete') as $msg) {
+			if($this->data[$msg]) {
+				echo '<div id="' .$msg. '" class="message">';
+				$this->html($msg);
+				echo '</div>';
+			}
+		}
+	?>
+				
+	<div id="container">
+		<div id="content" class="mw-body" role="main">
+			<div id="content-container" class="post type-post hentry category-submissions">
+				<h2 class="entry-title"><?php $this->html('title'); ?></h2>
+				<?php if ($this->data['subtitle']) { ?>
+					<span class="entry-sub-title"><?php $this->html('subtitle') ?></span><br/><br/>
+				<?php } ?>
+				<div id="bodyContent" class="entry-content">
+
+				<!-- INSERT WIKI STUFF HERE -->
+				<?php $this->html('bodytext') ?>
+				
+				<?php if ($this->data['dataAfterContent']) {
+					$this->html('dataAfterContent');
+				} ?>
+				
+
+				<br/><br/>
+				</div>
+				<!-- META -->
+				<div class="entry-meta">
+					<?php foreach($this->data['content_navigation'] as $links) {
+						foreach($links as $k => $a) {
+							if($k == 'main' || $a['redundant']) continue;
+							echo '<span class="author vcard">';
+							echo '<a href="' .$a['href']. '">' .$a['text']. '</a>';
+							echo '</span><span class="meta-sep">|</span>';
+						}
+					} ?>
+				</div>
+				<!-- END META -->
+			</div><!-- .post -->
+
+			<div id="nav-below" class="navigation">
+				<?php $this->html('catlinks'); ?>
+			</div>
+
+		</div><!-- #content -->
+	</div><!-- #container -->
+
+
+	<div id="footer-wrap">
+		<div id="footer-wrap-inner">
+
+		<div id="primary" class="footer">
+			<ul class="xoxo">
+
+			<li id="rss-just-better-3" class="widget rssjustbetter">
+				<h3 class="widgettitle"><?php $this->msg('newpages'); ?></h3>
+				<ul id="newestPages">
+				<?php foreach($this->newpages() as $i) {
+					printf('<li><a href="%s">%s</a></li>', $i['url'], $i['name']);
+				} ?>
+				</ul>
+			</li>
+
+			</ul>
+		</div><!-- #primary .sidebar -->
+
+		<div id="secondary" class="footer">
+			<ul class="xoxo">
+
+			<?php if($this->data['language_urls']) { ?>
+				<li class="widget widget_meta">
+					<h3 class="widgettitle"><?php $this->msg('otherlanguages') ?></h3>
+					<ul>
+					<?php foreach($this->data['language_urls'] as $k => $pg) {
+						if(empty($pg)) continue;
+						echo '<li><a href="';
+						echo htmlspecialchars($pg['href']);
+						echo '">';
+						$this->msg($k);
+						echo '</a></li>';
+					} ?>
+					</ul>
+				</li>
+			<?php } ?>
+
+			<li id="meta-2" class="widget widget_meta">
+				<h3 class="widgettitle"><?php $this->msg('toolbox') ?></h3>
+			<ul>
+			<?php foreach($this->data['nav_urls'] as $k => $pg) {
+				if($k == 'mainpage' || empty($pg)) continue;
+				echo '<li><a href="';
+				echo htmlspecialchars($pg['href']);
+				echo '">';
+				$this->msg($k);
+				echo '</a></li>';
+			} ?>
+			</ul>
+			</li>
+
+			</ul>
+		</div><!-- #secondary .sidebar -->
+
+		<div id="ternary" class="footer">
+			<ul class="xoxo">
+
+			<li id="p-search" class="widget widget_search">
+				<h3 class="widgettitle"><?php $this->msg('search') ?></h3>
+				<form action="<?php $this->text('searchaction') ?>" id="searchform">
+				<div>
+					<input id="s" name="search" type="text" 
+						<?php if( isset( $this->data['search'] ) ) { ?>
+						value="<?php $this->text('search') ?>"
+						<?php } ?>
+					/>
+					<input type='submit' name="fulltext" class="searchButton" id="searchsubmit" value="<?php $this->msg('searchbutton') ?>" />
+				</div>
+				</form>
+			</li>
+
+			<li id="nav_menu-3" class="widget widget_nav_menu">
+				<h3 class="widgettitle"><?php $this->msg('personaltools') ?></h3>
+
+				<div class="menu-bottom-menu-container">
+					<ul id="menu-bottom-menu" class="menu">
+					<?php foreach($this->data['personal_urls'] as $p) {
+						$h = htmlspecialchars($p["href"]);
+						$c = htmlspecialchars($p["class"]);
+						$t = htmlspecialchars($p["text"]);
+						echo '<li>';
+						echo '<a href="' .$h. '" class="' .$c. '">' .$t. '</a>';
+						echo '</li>';
+					} ?>
+					</ul>
+				</div>
+			</li>
+
+			</ul>
+		</div><!-- #ternary .sidebar -->
+
+		<div id="footer">
+			<?php foreach($this->data['footerlinks']['info'] as $l) {
+				echo '<p>'. $this->data[$l]. '</p>';
+			} ?>
+			<p>
+			<?php foreach($this->data['footerlinks']['places'] as $l) {
+				echo $this->data[$l]. ' ';
+			} ?>
+			</p>
+		</div><!-- #footer -->
+
+		</div><!-- #footer-wrap-inner -->
+	</div><!-- #footer-wrap -->
+
+</div><!-- #wrapper .hfeed -->
+<?php $this->printTrail(); ?>
+</body>
+</html>
+		<?php
+		wfRestoreWarnings();
+	}
+}
+
+?>

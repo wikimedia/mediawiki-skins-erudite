@@ -1,0 +1,11 @@
+#header {
+	display:none;
+}
+
+#access {
+	display:none;
+}
+
+.footer#primary, .footer#secondary, .footer#ternary {
+	display:none;
+}
