@@ -14,5 +14,7 @@ $messages = array();
 $messages['en'] = array(
 	'skinname-erudite' => "Erudite",
 	'erudite-desc' => "Based on The Erudite theme for Wordpress by Matt Wiebe.",
-	'jumptocontent' => "content",
+
+	'erudite-skiptocontent' => "Skip to content",
+	'erudite-skiptosearch' => "Skip to search",
 );

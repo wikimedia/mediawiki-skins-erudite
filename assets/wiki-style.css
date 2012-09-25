@@ -474,7 +474,15 @@ div.searchresult {
 }
 
 .mw-jump {
-	display: none;
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	z-index: 1;
+	color: #fff;
+	font-size: 1.25em;
+}
+.mw-jump a {
+	color: #fff;
 }
 
 img#logo {

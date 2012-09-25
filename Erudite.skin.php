@@ -65,6 +65,12 @@ class EruditeTemplate extends BaseTemplate {
 		}
 
 		?>
+<?php if($this->data['showjumplinks']) { ?>
+<div class="mw-jump">
+	<a href="#content"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
+	<a href="#p-search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
+</div>
+<?php } ?>
 <div id="wrapper" class="hfeed">
 	
 	<div id="header-wrap">
@@ -75,14 +81,7 @@ class EruditeTemplate extends BaseTemplate {
 		</div><!-- #header -->
 
 		<div id="access" role="navigation">
-			<?php if($this->data['showjumplinks']) { ?>
-				<div class="mw-jump">
-					<?php $this->msg( 'jumpto' ) ?> <a href="#content"><?php $this->msg( 'jumptocontent' ) ?></a>,
-					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
-				</div>
-			<?php } ?>
 			<div id="menu">
-
 			<ul id="menu-urs" class="menu">
 				<?php foreach( $this->data['sidebar']['navigation'] as $key => $val ) { ?>
 					<li id="menu-item-<?php echo Sanitizer::escapeId( $val['id'] ) ?>" class="menu-item menu-item-type-post_type menu-item">
