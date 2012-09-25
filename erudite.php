@@ -15,7 +15,7 @@ if( !defined( 'MEDIAWIKI' ) ) die( "This is an extension to the MediaWiki packag
 $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'name' => 'Erudite',
-	'url' => "http://www.unifiedrepublicofstars.com/reference/The_Unified_Republic_of_Stars:Skin",
+	'url' => "https://www.mediawiki.org/wiki/Skin:Erudite",
 	'author' => array( 'Matt Wiebe', 'Colin Andrew Ferm', 'Nick White' ),
 	'descriptionmsg' => 'erudite-desc',
 );
