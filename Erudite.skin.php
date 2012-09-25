@@ -117,10 +117,7 @@ class EruditeTemplate extends BaseTemplate {
 
 				<!-- INSERT WIKI STUFF HERE -->
 				<?php $this->html('bodytext') ?>
-				
-				<?php if ($this->data['dataAfterContent']) {
-					$this->html('dataAfterContent');
-				} ?>
+				<?php $this->html('dataAfterContent'); ?>
 				
 
 				<br/><br/>
