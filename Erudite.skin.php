@@ -108,7 +108,7 @@ class EruditeTemplate extends BaseTemplate {
 				
 	<div id="container">
 		<div id="content" class="mw-body" role="main">
-			<div id="content-container" class="post type-post hentry category-submissions">
+			<div id="content-container" class="post type-post category-submissions">
 				<h2 class="entry-title"><?php $this->html('title'); ?></h2>
 				<?php if ($this->data['subtitle']) { ?>
 					<span class="entry-sub-title"><?php $this->html('subtitle') ?></span><br/><br/>
