@@ -59,7 +59,10 @@ class EruditeTemplate extends BaseTemplate {
 
 		$this->html( 'headelement' );
 
-		global $wgSitename;
+		if ( !isset($this->data['sitename']) ) {
+			global $wgSitename;
+			$this->set( 'sitename', $wgSitename );
+		}
 
 		?>
 <div id="wrapper" class="hfeed">
@@ -67,7 +70,7 @@ class EruditeTemplate extends BaseTemplate {
 	<div id="header-wrap">
 		<div id="header" role="banner">
 			<?php echo '<img id="logo" src="' .htmlspecialchars($this->data['logopath']). '" alt="" />'; ?>
-			<h1 id="blog-title"><span><a href="<?php $this->text('scriptpath'); ?>/" title="<?php echo($wgSitename); ?>" rel="home"><?php echo($wgSitename); ?></a></span></h1>
+			<h1 id="blog-title"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
 			<div id="blog-description"><?php $this->msg('tagline') ?></div>
 		</div><!-- #header -->
 
