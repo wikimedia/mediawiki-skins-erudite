@@ -206,15 +206,16 @@ class EruditeTemplate extends BaseTemplate {
 
 			<li id="p-search" class="widget widget_search">
 				<h3 class="widgettitle"><?php $this->msg('search') ?></h3>
-				<form action="<?php $this->text('searchaction') ?>" id="searchform">
-				<div>
-					<input id="s" name="search" type="text" 
-						<?php if( isset( $this->data['search'] ) ) { ?>
-						value="<?php $this->text('search') ?>"
-						<?php } ?>
-					/>
-					<input type='submit' name="fulltext" class="searchButton" id="searchsubmit" value="<?php $this->msg('searchbutton') ?>" />
-				</div>
+				<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform">
+					<input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+					<div>
+						<?php echo $this->makeSearchInput( array( 'type' => 'text', 'id' => 's' ) ); ?>
+						<?php echo $this->makeSearchButton( 'go', array(
+							'value' => $this->translator->translate( 'searchbutton' ),
+							'class' => "searchButton",
+							'id'    => "searchsubmit",
+						) ); ?>
+					</div>
 				</form>
 			</li>
 
