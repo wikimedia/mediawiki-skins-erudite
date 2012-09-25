@@ -64,10 +64,6 @@ span.editsection {
 	font-size: 10pt;
 }
 
-body.ns-subject #content {
-	overflow: visible;
-}
-
 /* CSS placed here will be applied to all skins */
 
 .toc, #toc {
@@ -94,16 +90,12 @@ body.ns-subject #content {
 }
 
 #content {
-	overflow: auto;
-}
-
-#content {
 	width: 70em; 
 	padding-left: 6em; 
 	padding-top: 2.4em; 
 	padding-bottom: 0px;
 	margin-bottom: 0px;
-	overflow: hidden;
+	overflow: visible;
 	clear: both;
 }
 
