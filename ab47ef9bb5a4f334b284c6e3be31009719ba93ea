@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATH//9r4\u003d",
+        "filename": "assets/wiki-style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2012-09-25T22:43:32Z",
+      "side": 1,
+      "message": "#footer ul a {\n\tborder-color: #999;\n}",
+      "revId": "ab47ef9bb5a4f334b284c6e3be31009719ba93ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
