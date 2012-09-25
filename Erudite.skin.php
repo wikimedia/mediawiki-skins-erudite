@@ -228,14 +228,24 @@ class EruditeTemplate extends BaseTemplate {
 		</div><!-- #ternary .sidebar -->
 
 		<div id="footer">
-			<?php foreach($this->data['footerlinks']['info'] as $l) {
-				echo '<p>'. $this->data[$l]. '</p>';
+<?php
+			foreach ( $this->getFooterLinks() as $category => $links ) {
+				if ( $category === 'info' ) {
+					foreach ( $links as $key ) { ?>
+						<p><?php $this->html( $key ); ?></p>
+
+<?php
+					}
+				} else {
+					echo '<ul>';
+					foreach ( $links as $key ) { ?>
+						<li><?php $this->html( $key ); ?></li>
+
+<?php
+					}
+					echo '</ul>';
+				}
 			} ?>
-			<p>
-			<?php foreach($this->data['footerlinks']['places'] as $l) {
-				echo $this->data[$l]. ' ';
-			} ?>
-			</p>
 		</div><!-- #footer -->
 
 		</div><!-- #footer-wrap-inner -->

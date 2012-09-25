@@ -52,6 +52,18 @@ body.webkit.set-in-hoeflertext .entry-content div > p:first-child:first-letter {
 	min-width: 960px;
 }
 
+#footer ul a {border-color:#999;}
+#footer ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+}
+#footer li {
+	display: inline;
+	list-style: none;
+}
+
+
 a.new:link {
 	color: red;
 }
