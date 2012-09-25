@@ -24,10 +24,10 @@ $wgExtensionMessagesFiles['Erudite'] = dirname(__FILE__).'/Erudite.i18n.php';
 
 $wgResourceModules['skins.erudite'] = array(
 	'styles' => array(
-		'erudite/erudite.css' => array( 'media' => 'screen' ),
-		'erudite/wiki-style.css' => array( 'media' => 'screen' ),
-		'erudite/print.css' => array( 'media' => 'print' ),
+		'erudite/assets/erudite.css' => array( 'media' => 'screen' ),
+		'erudite/assets/wiki-style.css' => array( 'media' => 'screen' ),
+		'erudite/assets/print.css' => array( 'media' => 'print' ),
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
-	'localBasePath' => dirname(__FILE__),
+	'localBasePath' => &$GLOBALS['wgStyleDirectory'],
 );

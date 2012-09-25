@@ -6,22 +6,22 @@
 /* Background images: use relative urls, and enable @embed */
 body.baseline {
 	/* @embed */
-	background-image: url(skins/erudite/images/body-bg.png);
+	background-image: url(images/body-bg.png);
 }
 
 #header-wrap {
 	/* @embed */
-	background-image: url(skins/erudite/images/stripes.png);
+	background-image: url(images/stripes.png);
 }
 
 .entry-content div hr, .hr {
 	/* @embed */
-	background-image: url(skins/erudite/images/fleuron.png);
+	background-image: url(images/fleuron.png);
 }
 
 .entry-content div > p:first-child:first-letter {
 	/* @embed */
-	background: #555 url(skins/erudite/images/stripes.png) repeat;
+	background: #555 url(images/stripes.png) repeat;
 }
 
 /* Content is in .entry-content div, not just entry-content */

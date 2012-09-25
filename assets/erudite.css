@@ -16,7 +16,7 @@ sup { vertical-align:super; }
 sub { vertical-align:sub; }
 
 /* Typography Test */
-body.baseline {background-image:url(/skins/erudite/images/body-bg.png); background-repeat:repeat; background-position:left 20px;}
+body.baseline {background-image:url(images/body-bg.png); background-repeat:repeat; background-position:left 20px;}
 
 /* Layout. Based on the idea of 960.gs. Sorta. Loosely. */
 #container, #header, #footer-wrap-inner {width:96em; margin:0 auto; position:relative;}
@@ -49,7 +49,7 @@ a:hover {color:#223; text-decoration:underline;}
 a:active {color:#55f;}
 
 /* Header */
-#header-wrap {background:#333 url(/skins/erudite/images/stripes.png) repeat; margin-bottom:2em; padding:1em 0;}
+#header-wrap {background:#333 url(images/stripes.png) repeat; margin-bottom:2em; padding:1em 0;}
 #header h1, #header h1 a {color:#fff; text-decoration:none; line-height:1; margin:0;}
 #blog-description {font-size:1.4em; color:#fff;}
 
@@ -117,7 +117,7 @@ a:active {color:#55f;}
 div.post, div.page, div.attachment {position:relative; margin:0 0 3.2em; min-height:21.6em; clear:both;}
 div.post:after, div.page:after {clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}/*clearfix*/
 .post .shortened {overflow:hidden !important;}
-.entry-content hr, .hr {height:4.8em; background:url(/skins/erudite/images/fleuron.png) center 1em no-repeat; margin:0 0 2.4em; display:block; border-width:0px; border-style: none !important;}
+.entry-content hr, .hr {height:4.8em; background:url(images/fleuron.png) center 1em no-repeat; margin:0 0 2.4em; display:block; border-width:0px; border-style: none !important;}
 .entry-title, .entry-title a {color:#555; text-decoration:none;}
 .entry-title a:hover {text-decoration:underline;}
 .entry-title {margin:0 0 .5em; line-height:1.5;}
@@ -147,7 +147,7 @@ blockquote .after {right:-.5em; bottom:-.55em;}
 .entry-content li ol, .entry-content li ul {margin:.5em 0 0 .5em;}
 .entry-content p:first-child {text-indent:0;}
 body.single .entry-content > p:first-child:first-letter, .first-post .entry-content > p:first-child:first-letter {font-size:4.5em; line-height:.65em;}
-.entry-content > p:first-child:first-letter {font-size:3em; float:left; background:#555 url(/skins/erudite/images/stripes.png) repeat; color:#fff; margin:.05em .1em 0 0; padding:.1em; line-height:.7em;}
+.entry-content > p:first-child:first-letter {font-size:3em; float:left; background:#555 url(images/stripes.png) repeat; color:#fff; margin:.05em .1em 0 0; padding:.1em; line-height:.7em;}
 /* Webkit + Hoefler = Odd leading. Or at least different. */
 body.webkit.set-in-hoeflertext .entry-content > p:first-child:first-letter {padding:.2em .1em 0;}
 
@@ -262,7 +262,7 @@ body.dark {
 	background-color:#222;
 }
 .dark #header-wrap {
-	background-image:url(/skins/erudite/images/stripes-dark.png);
+	background-image:url(images/stripes-dark.png);
 }
 .dark #header-wrap, .dark #footer-wrap, .dark #menu-toggle div, .dark #foot-toggle span, .dark #nav-below a {
 	background-color:#fffff6;
@@ -296,6 +296,6 @@ body.dark {
 .dark a:active {color:#eec;}
 .dark .entry-content a {border-color:#777;}
 .dark .entry-content a:hover {text-decoration:none; border-color:#ddd;}
-.dark .entry-content hr, .dark .hr {background-image:url(/skins/erudite/images/fleuron-dark.png);}
+.dark .entry-content hr, .dark .hr {background-image:url(images/fleuron-dark.png);}
 
 
