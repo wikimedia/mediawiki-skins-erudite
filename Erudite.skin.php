@@ -167,13 +167,9 @@ class EruditeTemplate extends BaseTemplate {
 				<li class="widget widget_meta">
 					<h3 class="widgettitle"><?php $this->msg('otherlanguages') ?></h3>
 					<ul>
-					<?php foreach($this->data['language_urls'] as $k => $pg) {
-						if(empty($pg)) continue;
-						echo '<li><a href="';
-						echo htmlspecialchars($pg['href']);
-						echo '">';
-						$this->msg($k);
-						echo '</a></li>';
+<?php
+					foreach( $this->data['language_urls'] as $key => $langlink ) {
+						echo $this->makeListItem( $key, $langlink );
 					} ?>
 					</ul>
 				</li>
