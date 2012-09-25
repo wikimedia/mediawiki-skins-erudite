@@ -19,9 +19,9 @@ class SkinErudite extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 		$out->addModuleStyles( "skins.erudite" );
 		/* some versions of ie need css workarounds */
-		foreach(array(6,7,8) as $n) {
-			$out->addHeadItem('cssie'.$n, '<!--[if IE '.$n.']><link rel="stylesheet" href="skins/erudite/ie'.$n.'.css" /><![endif]-->');
-		}
+		$out->addStyle( 'erudite/assets/ie6.css', 'screen', 'IE 6' );
+		$out->addStyle( 'erudite/assets/ie7.css', 'screen', 'IE 7' );
+		$out->addStyle( 'erudite/assets/ie8.css', 'screen', 'IE 8' );
 	}
 }
 
