@@ -177,16 +177,13 @@ class EruditeTemplate extends BaseTemplate {
 
 			<li id="meta-2" class="widget widget_meta">
 				<h3 class="widgettitle"><?php $this->msg('toolbox') ?></h3>
-			<ul>
-			<?php foreach($this->data['nav_urls'] as $k => $pg) {
-				if($k == 'mainpage' || empty($pg)) continue;
-				echo '<li><a href="';
-				echo htmlspecialchars($pg['href']);
-				echo '">';
-				$this->msg($k);
-				echo '</a></li>';
-			} ?>
-			</ul>
+				<ul>
+<?php
+				foreach ( $this->getToolbox() as $key => $tbitem ) {
+					echo $this->makeListItem( $key, $tbitem );
+				}
+				wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) ); ?>
+				</ul>
 			</li>
 
 			</ul>
