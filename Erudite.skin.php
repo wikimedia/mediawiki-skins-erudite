@@ -261,5 +261,3 @@ class EruditeTemplate extends BaseTemplate {
 		wfRestoreWarnings();
 	}
 }
-
-?>
