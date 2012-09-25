@@ -124,14 +124,12 @@ class EruditeTemplate extends BaseTemplate {
 				</div>
 				<!-- META -->
 				<div class="entry-meta">
-					<?php foreach($this->data['content_navigation'] as $links) {
-						foreach($links as $k => $a) {
-							if($k == 'main' || $a['redundant']) continue;
-							echo '<span class="author vcard">';
-							echo '<a href="' .$a['href']. '">' .$a['text']. '</a>';
-							echo '</span><span class="meta-sep">|</span>';
-						}
-					} ?>
+<?php
+					foreach ( $this->data['content_actions'] as $key => $tab ) {
+						echo $this->makeListItem( $key, $tab, array( 'tag' => 'span' ) );
+						echo '<span class="meta-sep">|</span>';
+					}
+?>
 				</div>
 				<!-- END META -->
 			</div><!-- .post -->

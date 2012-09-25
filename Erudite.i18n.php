@@ -17,4 +17,7 @@ $messages['en'] = array(
 
 	'erudite-skiptocontent' => "Skip to content",
 	'erudite-skiptosearch' => "Skip to search",
+
+	// Tab text overrides
+	'erudite-action-addsection' => 'Add topic',
 );
