@@ -212,13 +212,9 @@ class EruditeTemplate extends BaseTemplate {
 
 				<div class="menu-bottom-menu-container">
 					<ul id="menu-bottom-menu" class="menu">
-					<?php foreach($this->data['personal_urls'] as $p) {
-						$h = htmlspecialchars($p["href"]);
-						$c = htmlspecialchars($p["class"]);
-						$t = htmlspecialchars($p["text"]);
-						echo '<li>';
-						echo '<a href="' .$h. '" class="' .$c. '">' .$t. '</a>';
-						echo '</li>';
+<?php
+					foreach ( $this->getPersonalTools() as $key => $item ) {
+						echo $this->makeListItem( $key, $item );
 					} ?>
 					</ul>
 				</div>
