@@ -4,7 +4,9 @@
  *
  * @file
  * @ingroup Skins
- * @author Matt Wiebe, Colin Andrew Ferm, Nick White
+ * @author Matt Wiebe
+ * @author Colin Andrew Ferm
+ * @author Nick White
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -14,8 +16,8 @@ $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'name' => 'Erudite',
 	'url' => "http://www.unifiedrepublicofstars.com/reference/The_Unified_Republic_of_Stars:Skin",
-	'author' => 'Colin Andrew Ferm',
-	'descriptionmsg' => 'Based on The Erudite theme for Wordpress by Matt Wiebe.',
+	'author' => array( 'Matt Wiebe', 'Colin Andrew Ferm', 'Nick White' ),
+	'descriptionmsg' => 'erudite-desc',
 );
 
 $wgValidSkinNames['erudite'] = 'Erudite';
