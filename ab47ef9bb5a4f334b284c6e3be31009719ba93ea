@@ -16,6 +16,24 @@
       "revId": "ab47ef9bb5a4f334b284c6e3be31009719ba93ea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH//9rg\u003d",
+        "filename": "assets/wiki-style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 30
+      },
+      "writtenOn": "2012-09-25T23:16:45Z",
+      "side": 1,
+      "message": "This was basically a copy of erudite.css\u0027:\n  #footer p a {border-color:#999;}",
+      "parentUuid": "AAAATH//9r4\u003d",
+      "revId": "ab47ef9bb5a4f334b284c6e3be31009719ba93ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
