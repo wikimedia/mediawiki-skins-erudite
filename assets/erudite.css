@@ -124,8 +124,8 @@ div.post:after, div.page:after {clear:both;content:' ';display:block;font-size:0
 h3.entry-title {margin-bottom:.857em;}
 .entry-content p, .entry-content li, .entry-content dt, .entry-content dd {font-size:1.6em; margin-bottom:.75em;}
 .entry-content li li {font-size:1em;}
-.entry-content table {font-size:1.6em; margin:1em 0;}
-.entry-content table p {font-size:1em; text-indent:0;}
+.entry-content table {margin:1em 0;}
+.entry-content table p {text-indent:0;}
 .entry-content td, .entry-content th {padding:.125em .5em; text-align:left;}
 .entry-content pre {font-size:1.4em;}
 .entry-content legend {font-size:1.4em; text-align:center; text-indent:0;}
