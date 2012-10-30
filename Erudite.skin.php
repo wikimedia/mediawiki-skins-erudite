@@ -152,7 +152,7 @@ class EruditeTemplate extends BaseTemplate {
 				<h3 class="widgettitle"><?php $this->msg('newpages'); ?></h3>
 				<ul id="newestPages">
 				<?php foreach($this->newpages() as $i) {
-					printf('<li><a href="%s">%s</a></li>', $i['url'], $i['name']);
+					printf('<li><a href="%s">%s</a></li>', htmlspecialchars($i['url']), htmlspecialchars($i['name']));
 				} ?>
 				</ul>
 			</li>
