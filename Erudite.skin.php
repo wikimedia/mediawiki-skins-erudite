@@ -39,8 +39,8 @@ class EruditeTemplate extends BaseTemplate {
 
 		$pgs = array();
 		foreach($res->result as $i) {
-			$name = str_replace('_', ' ', $i['rc_title']);
-			$url = $this->getSkin()->makeUrl($i['rc_title']);
+			$name = htmlspecialchars(str_replace('_', ' ', $i['rc_title']));
+			$url = htmlspecialchars($this->getSkin()->makeUrl($i['rc_title']));
 			$pgs[] = array('name' => $name, 'url' => $url);
 		}
 
