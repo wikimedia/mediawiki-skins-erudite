@@ -498,3 +498,8 @@ img#logo {
 	right: -20em;
 	width: 10em;
 }
+
+/* bright red is rather too glaring */
+a.new:link {
+        color: #cc0000;
+}
