@@ -65,7 +65,7 @@ body.webkit.set-in-hoeflertext .entry-content div > p:first-child:first-letter {
 
 
 a.new:link {
-	color: red;
+        color: #cc0000;
 }
 
 a.new:visited {
