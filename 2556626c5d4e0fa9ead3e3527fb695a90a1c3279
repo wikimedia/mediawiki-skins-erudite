@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH///H0\u003d",
+        "filename": "assets/wiki-style.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2012-11-15T18:05:20Z",
+      "side": 1,
+      "message": "This selector looks weird \".mw-content-rtl .mw-content-ltr ul\", probably not what you wanted to do, is it?",
+      "revId": "2556626c5d4e0fa9ead3e3527fb695a90a1c3279",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
