@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH///Kc\u003d",
+        "filename": "assets/wiki-style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 504,
+      "author": {
+        "id": 82
+      },
+      "writtenOn": "2012-11-15T17:04:46Z",
+      "side": 1,
+      "message": "Can you make sure to use tabs, in this file? I think the others used tabs, but this one apparently has spaces.",
+      "revId": "9b5a814cf063109d5cd0592bbf88d2be46e14f54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
