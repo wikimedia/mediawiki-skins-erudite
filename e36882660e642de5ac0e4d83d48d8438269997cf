@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH///Hs\u003d",
+        "filename": "assets/wiki-style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2012-11-15T18:07:14Z",
+      "side": 1,
+      "message": "Why didn\u0027t you change this over here, but overwrite this below?",
+      "revId": "e36882660e642de5ac0e4d83d48d8438269997cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
