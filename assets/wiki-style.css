@@ -185,8 +185,13 @@ div.thumbinner {
 	overflow: hidden;
 }
 
-html .thumbimage {
-	border: 1px solid #ccc;
+img.thumbimage {
+	border: none;
+	padding: 0px;
+}
+
+.thumbinner>a {
+	border: none;
 }
 
 html .thumbcaption {
