@@ -113,15 +113,6 @@ class EruditeTemplate extends BaseTemplate {
 				<?php if ($this->data['subtitle']) { ?>
 					<span class="entry-sub-title"><?php $this->html('subtitle') ?></span><br/><br/>
 				<?php } ?>
-				<div id="bodyContent" class="entry-content">
-
-				<!-- INSERT WIKI STUFF HERE -->
-				<?php $this->html('bodytext') ?>
-				<?php $this->html('dataAfterContent'); ?>
-				
-
-				<br/><br/>
-				</div>
 				<!-- META -->
 				<div class="entry-meta">
 <?php
@@ -132,6 +123,13 @@ class EruditeTemplate extends BaseTemplate {
 ?>
 				</div>
 				<!-- END META -->
+				<div id="bodyContent" class="entry-content">
+
+				<!-- INSERT WIKI STUFF HERE -->
+				<?php $this->html('bodytext') ?>
+				<?php $this->html('dataAfterContent'); ?>
+
+				</div>
 			</div><!-- .post -->
 
 			<div id="nav-below" class="navigation">
