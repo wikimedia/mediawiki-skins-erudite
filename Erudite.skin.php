@@ -54,6 +54,8 @@ class EruditeTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
+		global $wgEruditeBannerImg;
+
 		// suppress warnings to prevent notices about missing indexes in $this->data
 		wfSuppressWarnings();
 
@@ -73,7 +75,13 @@ class EruditeTemplate extends BaseTemplate {
 <?php } ?>
 <div id="wrapper" class="hfeed">
 	
-	<div id="header-wrap">
+	<?php
+		if ( isset( $wgEruditeBannerImg ) ) {
+			echo '<div id="header-wrap" style="background-image: url(' . $wgEruditeBannerImg . ')">';
+		} else {
+			echo '<div id="header-wrap">';
+		}
+	?>
 		<div id="header" role="banner">
 			<?php echo Html::element( 'img', array( 'id' => "logo", 'src' => $this->data['logopath'], 'alt' => "" ) ); ?>
 			<h1 id="blog-title"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>

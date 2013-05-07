@@ -49,7 +49,7 @@ a:hover {color:#223; text-decoration:underline;}
 a:active {color:#55f;}
 
 /* Header */
-#header-wrap {background:#333 url(images/stripes.png) repeat; margin-bottom:2em; padding:1em 0;}
+#header-wrap {background-color:#333; background-repeat: repeat; background-image: url(images/stripes.png); margin-bottom:2em; padding:1em 0;}
 #header h1, #header h1 a {color:#fff; text-decoration:none; line-height:1; margin:0;}
 #blog-description {font-size:1.4em; color:#fff;}
 
