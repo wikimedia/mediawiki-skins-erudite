@@ -26,25 +26,17 @@ class SkinErudite extends SkinTemplate {
 }
 
 class EruditeTemplate extends BaseTemplate {
-	private function newpages() {
-		$tables = array('recentchanges');
-		$fields = array('rc_title');
-		$conds  = array('rc_type' => RC_NEW, 'rc_namespace' => 0);
-		$options = array('ORDER BY' => 'rc_timestamp DESC', 'LIMIT' => 5);
-		$join_conds = array();
+	/**
+	 * Like msgWiki() but it ensures edit section links are never shown.
+	 */
+	function msgWikiNoEdit( $message ) {
+		global $wgOut;
+		global $wgParser;
 
-		$mDb = wfGetDB(DB_SLAVE);
-
-		$res = $mDb->select($tables, $fields, $conds, __METHOD__, $options, $join_conds);
-
-		$pgs = array();
-		foreach($res->result as $i) {
-			$name = str_replace('_', ' ', $i['rc_title']);
-			$url = $this->getSkin()->makeUrl($i['rc_title']);
-			$pgs[] = array('name' => $name, 'url' => $url);
-		}
-
-		return $pgs;
+		$popts = new ParserOptions();
+		$popts->setEditSection( false );
+		$text = wfMessage( $message )->text();
+		return $wgParser->parse( $text, $wgOut->getTitle(), $popts )->getText();
 	}
 
 	/**
@@ -68,14 +60,13 @@ class EruditeTemplate extends BaseTemplate {
 <?php if($this->data['showjumplinks']) { ?>
 <div class="mw-jump">
 	<a href="#content"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
-	<a href="#p-search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
+	<a href="#search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
 </div>
 <?php } ?>
 <div id="wrapper" class="hfeed">
 	
 	<div id="header-wrap">
 		<div id="header" role="banner">
-			<?php echo Html::element( 'img', array( 'id' => "logo", 'src' => $this->data['logopath'], 'alt' => "" ) ); ?>
 			<h1 id="blog-title"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
 			<div id="blog-description"><?php $this->msg('tagline') ?></div>
 		</div><!-- #header -->
@@ -124,15 +115,32 @@ class EruditeTemplate extends BaseTemplate {
 				</div>
 				<!-- META -->
 				<div class="entry-meta">
-<?php
+				<?php
 					foreach ( $this->data['content_actions'] as $key => $tab ) {
 						echo $this->makeListItem( $key, $tab, array( 'tag' => 'span' ) );
 						echo '<span class="meta-sep">|</span>';
 					}
-?>
+				?>
 				</div>
 				<!-- END META -->
 			</div><!-- .post -->
+
+			<div id="footer">
+				<?php foreach ( $this->getFooterLinks() as $category => $links ) {
+					if ( $category === 'info' ) {
+						foreach ( $links as $key ) { ?>
+							<p><?php $this->html( $key ); ?></p>
+
+					<?php }
+					} else {
+						echo '<ul>';
+						foreach ( $links as $key ) { ?>
+							<li><?php $this->html( $key ); ?></li>
+						<?php }
+						echo '</ul>';
+					}
+				} ?>
+			</div>
 
 			<div id="nav-below" class="navigation">
 				<?php $this->html('catlinks'); ?>
@@ -146,54 +154,10 @@ class EruditeTemplate extends BaseTemplate {
 		<div id="footer-wrap-inner">
 
 		<div id="primary" class="footer">
-			<ul class="xoxo">
+			<ul>
 
-			<li id="rss-just-better-3" class="widget rssjustbetter">
-				<h3 class="widgettitle"><?php $this->msg('newpages'); ?></h3>
-				<ul id="newestPages">
-				<?php foreach($this->newpages() as $i) {
-					printf('<li><a href="%s">%s</a></li>', htmlspecialchars($i['url']), htmlspecialchars($i['name']));
-				} ?>
-				</ul>
-			</li>
-
-			</ul>
-		</div><!-- #primary .sidebar -->
-
-		<div id="secondary" class="footer">
-			<ul class="xoxo">
-
-			<?php if($this->data['language_urls']) { ?>
-				<li class="widget widget_meta">
-					<h3 class="widgettitle"><?php $this->msg('otherlanguages') ?></h3>
-					<ul>
-<?php
-					foreach( $this->data['language_urls'] as $key => $langlink ) {
-						echo $this->makeListItem( $key, $langlink );
-					} ?>
-					</ul>
-				</li>
-			<?php } ?>
-
-			<li id="meta-2" class="widget widget_meta">
-				<h3 class="widgettitle"><?php $this->msg('toolbox') ?></h3>
-				<ul>
-<?php
-				foreach ( $this->getToolbox() as $key => $tbitem ) {
-					echo $this->makeListItem( $key, $tbitem );
-				}
-				wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) ); ?>
-				</ul>
-			</li>
-
-			</ul>
-		</div><!-- #secondary .sidebar -->
-
-		<div id="ternary" class="footer">
-			<ul class="xoxo">
-
-			<li id="p-search" class="widget widget_search">
-				<h3 class="widgettitle"><?php $this->msg('search') ?></h3>
+			<li id="search" class="widget">
+				<h3><?php $this->msg('search') ?></h3>
 				<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform">
 					<input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
 					<div>
@@ -207,42 +171,75 @@ class EruditeTemplate extends BaseTemplate {
 				</form>
 			</li>
 
-			<li id="nav_menu-3" class="widget widget_nav_menu">
-				<h3 class="widgettitle"><?php $this->msg('personaltools') ?></h3>
+			<?php if($this->data['language_urls']) { ?>
+				<li>
+					<h3><?php $this->msg('otherlanguages') ?></h3>
+					<ul>
+					<?php
+					foreach( $this->data['language_urls'] as $key => $langlink ) {
+						echo $this->makeListItem( $key, $langlink );
+					} ?>
+					</ul>
+				</li>
+			<?php } ?>
 
-				<div class="menu-bottom-menu-container">
-					<ul id="menu-bottom-menu" class="menu">
-<?php
+			<?php if( $this->getPersonalTools() != array() ) { ?>
+			<li class="widget">
+				<h3><?php $this->msg('personaltools') ?></h3>
+
+				<div>
+					<ul>
+					<?php
 					foreach ( $this->getPersonalTools() as $key => $item ) {
 						echo $this->makeListItem( $key, $item );
 					} ?>
 					</ul>
 				</div>
 			</li>
+			<?php } ?>
+
+			<li class="widget">
+				<?php echo $this->msgWikiNoEdit( 'erudite-extracontent-column1' ); ?>
+			</li>
+
+			</ul>
+		</div><!-- #primary .sidebar -->
+
+		<div id="secondary" class="footer">
+			<ul>
+
+			<li id="toolbox" class="widget">
+				<h3><?php $this->msg('toolbox') ?></h3>
+				<ul>
+				<?php
+				foreach ( $this->getToolbox() as $key => $tbitem ) {
+					echo $this->makeListItem( $key, $tbitem );
+				}
+				wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) ); ?>
+				</ul>
+			</li>
+
+			<li class="widget">
+				<?php echo $this->msgWikiNoEdit( 'erudite-extracontent-column2' ); ?>
+			</li>
+
+			</ul>
+		</div><!-- #secondary .sidebar -->
+
+		<div id="ternary" class="footer">
+			<ul>
+
+			<li class="widget">
+				<?php echo Html::element( 'img', array( 'id' => "logo", 'src' => $this->data['logopath'], 'alt' => "" ) ); ?>
+			</li>
+
+			<li class="widget">
+				<?php echo $this->msgWikiNoEdit( 'erudite-extracontent-column3' ); ?>
+			</li>
 
 			</ul>
 		</div><!-- #ternary .sidebar -->
-
-		<div id="footer">
-<?php
-			foreach ( $this->getFooterLinks() as $category => $links ) {
-				if ( $category === 'info' ) {
-					foreach ( $links as $key ) { ?>
-						<p><?php $this->html( $key ); ?></p>
-
-<?php
-					}
-				} else {
-					echo '<ul>';
-					foreach ( $links as $key ) { ?>
-						<li><?php $this->html( $key ); ?></li>
-
-<?php
-					}
-					echo '</ul>';
-				}
-			} ?>
-		</div><!-- #footer -->
+		<div class="visualClear"></div>
 
 		</div><!-- #footer-wrap-inner -->
 	</div><!-- #footer-wrap -->
