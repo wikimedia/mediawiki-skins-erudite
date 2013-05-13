@@ -503,3 +503,13 @@ img#logo {
 	right: -20em;
 	width: 10em;
 }
+
+/* don't give lists massive margins when in tds */
+.mw-content-ltr ul, .mw-content-rtl ul {
+        margin-left: 0em;
+}
+
+/* reduce h3 top margin in a table, so can be used as a table title */
+table h3 {
+        margin-top: 1ex;
+}
