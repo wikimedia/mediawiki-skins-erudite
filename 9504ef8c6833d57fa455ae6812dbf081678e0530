@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxbqPeHU",
+        "filename": "Erudite.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-18T18:59:24Z",
+      "side": 1,
+      "message": "There is some way to mark messages as not meant for translation, but I have no idea how to do this in extensions. You should ask Siebrand or Niklas (I added them as reviewers).",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxTr0CPA",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-18T18:59:24Z",
+      "side": 1,
+      "message": "I find it hard to believe this is necessary :/ Isn\u0027t this disabled by default?",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxZqMPII",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-18T18:59:24Z",
+      "side": 1,
+      "message": "$this-\u003etranslator is an old piece of cruft, just use wfMessage( ... )-\u003etext(). (See also my proposed I42b13beea in core, which will kill it.)",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxfrpAB0",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-18T18:59:24Z",
+      "side": 1,
+      "message": "Trailing spaces, if you care about this sort of thing.",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxdruxCI",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-18T18:59:24Z",
+      "side": 1,
+      "message": "Inline style?",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
