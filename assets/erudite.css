@@ -25,6 +25,11 @@ body.single #content, body.page #content {overflow:visible;}
 .sidebar {width:24em; clear:both;}
 #footer {clear:both;}
 
+/* Use dark stripes around edge to focus on content */
+div#container { background: white; padding-top: 2em; }
+div#wrapper { background: #fafafa url(images/stripes-dark.png); }
+div#content-container { margin-bottom: 0px; }
+
 /* Typography Base */
 body {font: normal normal normal 10px/1.5 constantia,'hoefler text','palatino linotype',serif; background:#fafafa; color:#333; }
 textarea, select, input {font-size:12px;}
@@ -49,7 +54,7 @@ a:hover {color:#223; text-decoration:underline;}
 a:active {color:#55f;}
 
 /* Header */
-#header-wrap {background:#333 url(images/stripes.png) repeat; margin-bottom:2em; padding:1em 0;}
+#header-wrap {background:#333 url(images/stripes.png) repeat; padding:1em 0;}
 #header h1, #header h1 a {color:#fff; text-decoration:none; line-height:1; margin:0;}
 #blog-description {font-size:1.4em; color:#fff;}
 
