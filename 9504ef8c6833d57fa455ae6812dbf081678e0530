@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DxbCgOaQ",
+        "filename": "Erudite.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-20T15:04:49Z",
+      "side": 1,
+      "message": "Would it be to add \u0027qqq\u0027 messages? This should be done anyway, correct? Siebrand or Niklas can you confirm, please?",
+      "parentUuid": "DxbqPeHU",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxTr0CPA",
         "filename": "Erudite.skin.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-18T18:59:24Z",
       "side": 1,
       "message": "I find it hard to believe this is necessary :/ Isn\u0027t this disabled by default?",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxfAnYR8",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-20T15:04:49Z",
+      "side": 1,
+      "message": "After quite a bit of digging in the mediawiki code, I confirmed that no, it is not. It\u0027s disabled in articles manually in Article.php (if the user isn\u0027t logged in), and msgWiki() and related functions don\u0027t do anything similar.\n\nArguably they should, but I don\u0027t work on mediawiki code enough to be able to say confidently. I\u0027ll open a bug in bugzilla recommending this.\n\nBut for now I\u0027ll keep this function, as it\u0027s needed here.",
+      "parentUuid": "DxTr0CPA",
       "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DxRA3bU0",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-20T15:04:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DxZqMPII",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxfrpAB0",
         "filename": "Erudite.skin.php",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "DxXA88S0",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-20T15:04:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DxfrpAB0",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxdruxCI",
         "filename": "Erudite.skin.php",
         "patchSetId": 2
@@ -81,6 +153,24 @@
       "writtenOn": "2013-05-18T18:59:24Z",
       "side": 1,
       "message": "Inline style?",
+      "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxfAQAa0",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-20T15:04:49Z",
+      "side": 1,
+      "message": "OK, I\u0027m using the visualClear mediawiki class now, good spot",
+      "parentUuid": "DxdruxCI",
       "revId": "9504ef8c6833d57fa455ae6812dbf081678e0530",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
