@@ -101,16 +101,6 @@ span.editsection {
 	margin-left: 10pt;
 }
 
-#content {
-	width: 70em; 
-	padding-left: 6em; 
-	padding-top: 2.4em; 
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	overflow: visible;
-	clear: both;
-}
-
 div.entry-content li {
 	margin-left: 30px;
 }
@@ -277,18 +267,6 @@ table.mw-specialpages-table tbody tr td ul {
 }
 
 /* Category Links */
-#nav-below {
-	width: 80em;
-	height: auto;
-	position: relative;
-	bottom: 0em;
-	left: 0em;
-}
-
-#nav-below div {
-	max-width: 80em;
-}
-
 #mw-normal-catlinks > a {
 	padding-left: 0.5em;
 }
@@ -310,7 +288,8 @@ table.mw-specialpages-table tbody tr td ul {
 .message {
 	margin: 0 auto;
 	position: relative;
-	width: 960px;
+	min-width: 96em;
+	width: 90%;
 	color: #fff;
 	background-color: #666666;
 	font-size: 13pt;
@@ -355,7 +334,7 @@ div.system-sidebar-header h3 {
 
 div.system-sidebar-body {
 	padding: 6px; 
-	text-indent: 0pt;Ê
+	text-indent: 0pt;
 	word-spacing: 0pt;
 	font-size: 10pt;
 }
@@ -497,10 +476,8 @@ img#logo {
 	float: right;
 }
 
-/* make meta area narrower */
-.entry-meta {
-	right: -20em;
-	width: 10em;
+div#bodyContent {
+	padding-bottom: 20px;
 }
 
 /* don't give lists massive margins when in tds */

@@ -19,8 +19,8 @@ sub { vertical-align:sub; }
 body.baseline {background-image:url(images/body-bg.png); background-repeat:repeat; background-position:left 20px;}
 
 /* Layout. Based on the idea of 960.gs. Sorta. Loosely. */
-#container, #header, #footer-wrap-inner {width:96em; margin:0 auto; position:relative;}
-#content {width:54em; padding-left:6em; padding-top:2.4em; overflow:hidden;}
+#container, #header, #footer-wrap-inner {min-width:96em; width:90%; margin:0 auto; position:relative;}
+#content {padding:2.4em 6em 0em 6em;}
 body.single #content, body.page #content {overflow:visible;}
 .sidebar {width:24em; clear:both;}
 #footer {clear:both;}
@@ -60,7 +60,7 @@ a:active {color:#55f;}
 
 /* Menu */
 .skip-link {display:none;}
-#access {width:96em; margin:0 auto;}
+#access {min-width:96em; width:90%; margin:0 auto;}
 #menu {margin:2.4em 0 -1em; overflow:hidden; padding:1.2em 6em; border-top:1px solid #666; background:#333; background:rgba(50,50,50,.7);}
 #menu a {color:#fff;}
 #menu li {display:block; float:left; margin-right:2em; font-size:1.6em;}
@@ -79,10 +79,10 @@ a:active {color:#55f;}
 #menu-toggle div:hover {background:#666;}
 
 /* Navigation */
-#nav-below {clear:both; width:54em; height:2.7em; position:absolute; left:6em; bottom:0.1em; z-index:5;}
+#nav-below {clear:both; z-index:5;}
 .hiding #nav-below {bottom:-3.5em;}
 .paged #nav-below {}
-#nav-below div {background:#666; height:100%; max-width:49.9%; overflow:hidden;}
+#nav-below div {background:#666; height:100%; overflow:hidden;}
 .nav-previous {float:left;}
 .nav-next {float:right;}
 #nav-below a {color:#fff; padding:0 1em; line-height:2; height:100%; font-size:1.2em; display:block;}
@@ -96,7 +96,7 @@ a:active {color:#55f;}
 /* Footer */
 #footer-wrap {background:#333; clear:both; color:#fff; padding:2.4em 0;}
 .js .hiding #footer-wrap {display:none;}
-.footer {width:24em; float:left; margin-left:6em;}
+.footer {min-width:24em; width:25%; float:left; margin-left:5%;}
 .footer h3, .footer h2 {border-bottom:1px solid #666; font-size:2.1em; line-height:1.143; margin:1.143em 0 .19em;}
 .footer ul li {margin:0 0 3.6em;}
 .footer ul li li, .footer ul div {font-size:1.4em; margin:0;}
@@ -195,7 +195,7 @@ blockquote.epigraph cite {text-align:right; font-size:1.2em; display:block; font
 .home-post hr, .home-post .hr {display:none;}
 
 /* entry meta */
-.entry-meta {position:absolute; top:5.1em; padding-left:2em; width:22em; right:-36em; border-left:1px solid #aaa;}
+.entry-meta {float:right; padding-left:15px; margin-bottom:10px; margin-left:15px; border-left:1px solid #aaa;}
 .entry-meta span {display:block; font-size:1.1em; line-height:1.455; padding:.364em 0;}
 .entry-meta a {font-style:italic;}
 .entry-meta .meta-sep {display:none;}
