@@ -61,8 +61,9 @@ class EruditeTemplate extends BaseTemplate {
 		?>
 <?php if($this->data['showjumplinks']) { ?>
 <div class="mw-jump">
-	<a href="#content"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
-	<a href="#search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
+	<?php $this->msg( 'jumpto' ) ?>
+	<a href="#content"><?php $this->msg( 'jumptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
+	<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
 </div>
 <?php } ?>
 <div id="wrapper" class="hfeed">
