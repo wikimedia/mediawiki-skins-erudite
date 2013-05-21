@@ -473,7 +473,8 @@ div.searchresult {
 }
 
 img#logo {
-	float: right;
+	display: block;
+	margin: 24px auto 0px;
 }
 
 div#bodyContent {

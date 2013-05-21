@@ -20,4 +20,9 @@ $messages['en'] = array(
 
 	// Tab text overrides
 	'erudite-action-addsection' => 'Add topic',
+
+	/* Optional extra footer content for columns (leave blank by default) */
+	'erudite-extracontent-column1' => "",
+	'erudite-extracontent-column2' => "",
+	'erudite-extracontent-column3' => "",
 );
