@@ -52,6 +52,24 @@
       "revId": "b3a9a473a5e40dd7b5e9387adcc0226cfc113a3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxYV-tBE",
+        "filename": "Erudite.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-21T19:05:41Z",
+      "side": 0,
+      "message": "Aah, I didn\u0027t expect that! Thanks for correcting me (I haven\u0027t been using talk pages with the skin, so didn\u0027t notice it). I\u0027ll put it back soon in an updated commit.",
+      "parentUuid": "DxeWmeMM",
+      "revId": "b3a9a473a5e40dd7b5e9387adcc0226cfc113a3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
