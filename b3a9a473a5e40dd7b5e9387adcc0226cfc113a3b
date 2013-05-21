@@ -16,6 +16,24 @@
       "revId": "b3a9a473a5e40dd7b5e9387adcc0226cfc113a3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxYVIVDE",
+        "filename": "Erudite.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-21T18:11:51Z",
+      "side": 0,
+      "message": "This isn\u0027t used by the skin, so I just removed it.",
+      "parentUuid": "DxSV2oKA",
+      "revId": "b3a9a473a5e40dd7b5e9387adcc0226cfc113a3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

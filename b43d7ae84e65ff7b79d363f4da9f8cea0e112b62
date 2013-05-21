@@ -16,6 +16,24 @@
       "revId": "b43d7ae84e65ff7b79d363f4da9f8cea0e112b62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxQU0RKk",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-05-21T18:11:51Z",
+      "side": 1,
+      "message": "* OK, thanks for the clarification. I wanted to move it to be closer to the main skins, but I suppose I\u0027d be much better off keeping things as they were.\n* I wasn\u0027t sure about the generic message thing (that was the main reason I added you as a reviewer, actually).",
+      "parentUuid": "DxeV7GIg",
+      "revId": "b43d7ae84e65ff7b79d363f4da9f8cea0e112b62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
