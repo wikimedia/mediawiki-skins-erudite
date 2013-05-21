@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxSV2oKA",
+        "filename": "Erudite.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 30
+      },
+      "writtenOn": "2013-05-21T17:50:57Z",
+      "side": 0,
+      "message": "Reverting to \u0027+\u0027 instead?",
+      "revId": "b3a9a473a5e40dd7b5e9387adcc0226cfc113a3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

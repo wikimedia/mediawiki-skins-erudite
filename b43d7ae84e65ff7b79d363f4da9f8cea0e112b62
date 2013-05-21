@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxeV7GIg",
+        "filename": "Erudite.skin.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 30
+      },
+      "writtenOn": "2013-05-21T17:50:57Z",
+      "side": 1,
+      "message": "I seriously do not recommend this:\n* \"Skip links\" are the standard and well known name for these. The only reason these persist as \"Jump\" links in our default skins is because I left those alone as those work opposite to standard skip links (Standard skip links are \"Skip to content\" skipping over the navigation where our default skins are instead \"Jump to navigation\" skipping over the content with things in a different order.\n* Declaring a generic message inside of an extension/skin is also very bad practice.",
+      "revId": "b43d7ae84e65ff7b79d363f4da9f8cea0e112b62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
