@@ -83,7 +83,7 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="menu">
 			<ul id="menu-urs" class="menu">
 				<?php foreach( $this->data['sidebar']['navigation'] as $key => $val ) { ?>
-					<li id="menu-item-<?php echo Sanitizer::escapeId( $val['id'] ) ?>" class="menu-item menu-item-type-post_type menu-item">
+					<li id="menu-item-<?php echo Sanitizer::escapeId( $val['id'] ) ?>" class="menu-item">
 						<a href="<?php echo htmlspecialchars( $val['href'] ) ?>"><?php echo htmlspecialchars( $val['text'] ) ?></a>
 					</li>
 				<?php } ?>
@@ -107,7 +107,7 @@ class EruditeTemplate extends BaseTemplate {
 				
 	<div id="container">
 		<div id="content" class="mw-body" role="main">
-			<div id="content-container" class="post type-post category-submissions">
+			<div id="content-container">
 				<h2 class="entry-title"><?php $this->html('title'); ?></h2>
 				<?php if ($this->data['subtitle']) { ?>
 					<span class="entry-sub-title"><?php $this->html('subtitle') ?></span><br/><br/>
@@ -129,7 +129,7 @@ class EruditeTemplate extends BaseTemplate {
 				<?php $this->html('dataAfterContent'); ?>
 
 				</div>
-			</div><!-- .post -->
+			</div>
 
 			<div id="footer">
 				<?php foreach ( $this->getFooterLinks() as $category => $links ) {
@@ -147,9 +147,7 @@ class EruditeTemplate extends BaseTemplate {
 				} ?>
 			</div>
 
-			<div id="nav-below" class="navigation">
-				<?php $this->html('catlinks'); ?>
-			</div>
+			<?php $this->html('catlinks'); ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
