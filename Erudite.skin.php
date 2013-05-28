@@ -75,8 +75,8 @@ class EruditeTemplate extends BaseTemplate {
 		}
 	?>
 		<div id="header" role="banner">
-			<h1 id="blog-title"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
-			<div id="blog-description"><?php $this->msg('tagline') ?></div>
+			<h1 id="siteTitle"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
+			<div id="siteSubtitle"><?php $this->msg('tagline') ?></div>
 		</div><!-- #header -->
 
 		<div id="access" role="navigation">
@@ -134,15 +134,14 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="footer">
 				<?php foreach ( $this->getFooterLinks() as $category => $links ) {
 					if ( $category === 'info' ) {
-						foreach ( $links as $key ) { ?>
-							<p><?php $this->html( $key ); ?></p>
-
-					<?php }
+						foreach ( $links as $key ) {
+							printf( "<p>%s</p>\n", $this->html( $key ) );
+						}
 					} else {
 						echo '<ul>';
-						foreach ( $links as $key ) { ?>
-							<li><?php $this->html( $key ); ?></li>
-						<?php }
+						foreach ( $links as $key ) {
+							printf( "<li>%s</li>\n", $this->html( $key ) );
+						}
 						echo '</ul>';
 					}
 				} ?>
