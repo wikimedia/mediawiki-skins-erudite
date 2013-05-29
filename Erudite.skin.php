@@ -18,10 +18,6 @@ class SkinErudite extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 		$out->addModuleStyles( 'skins.erudite' );
-		/* some versions of ie need css workarounds */
-		$out->addStyle( 'erudite/assets/ie6.css', 'screen', 'IE 6' );
-		$out->addStyle( 'erudite/assets/ie7.css', 'screen', 'IE 7' );
-		$out->addStyle( 'erudite/assets/ie8.css', 'screen', 'IE 8' );
 	}
 }
 
@@ -137,12 +133,16 @@ class EruditeTemplate extends BaseTemplate {
 					foreach ( $this->getFooterLinks() as $category => $links ) {
 						if ( $category === 'info' ) {
 							foreach ( $links as $key ) {
-								printf( '<p>%s</p>\n', $this->html( $key ) );
+								echo '<p>';
+								$this->html( $key );
+								echo '</p>';
 							}
 						} else {
 							echo '<ul>';
 							foreach ( $links as $key ) {
-								printf( '<li>%s</li>\n', $this->html( $key ) );
+								echo '<li>';
+								$this->html( $key );
+								echo '</li>';
 							}
 							echo '</ul>';
 						}
