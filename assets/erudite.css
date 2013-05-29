@@ -567,6 +567,10 @@ table.mw-specialpages-table tbody tr td ul {
 	color: #dfdfdf;
 }
 
+#mw-js-message {
+	display: none;
+}
+
 .mw-search-formheader div.search-types ul li {
 	float: left;
 	margin-left: 20px;
