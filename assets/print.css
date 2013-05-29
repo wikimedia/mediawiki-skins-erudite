@@ -1,11 +1,10 @@
-#header {
+#header-wrap,
+#mw-js-message,
+.entry-meta,
+#footer-wrap {
 	display:none;
 }
 
-#access {
-	display:none;
-}
-
-.footer#primary, .footer#secondary, .footer#ternary {
-	display:none;
+.printfooter {
+	text-align: left;
 }
