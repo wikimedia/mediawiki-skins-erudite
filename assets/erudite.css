@@ -247,9 +247,9 @@ a.new {
 
 hr {
 	/* @embed */
-	background: url(images/fleuron.png) center 1em no-repeat;
-	height: 4.8em;
-	margin: 0 0 2.4em;
+	background: url(images/hr.png) center no-repeat;
+	height: 24px;
+	margin: 0 0 10px;
 	display: block;
 	border-width: 0px;
 	border-style: none !important;
