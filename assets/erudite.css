@@ -264,7 +264,8 @@ hr {
 .entry-content p,
 .entry-content li,
 .entry-content dt,
-.entry-content dd {
+.entry-content dd,
+.entry-content center {
 	font-size: 1.6em;
 	margin-bottom: 0.75em;
 }
@@ -308,6 +309,16 @@ hr {
 .entry-content li ol,
 .entry-content li ul {
 	margin: 0.5em 0 0 0.5em;
+}
+
+.center {
+	width: 100%;
+	text-align: center;
+}
+
+.center * {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Main Links */
@@ -382,10 +393,8 @@ sup.reference:target {
 
 /* Images */
 .entry-content img {
-	border: 1px solid #aaaaaa;
 	padding: 4px;
 	margin-bottom: 6px;
-	max-width: 100%;
 }
 
 .entry-content .gallery a {
@@ -420,17 +429,15 @@ div.floatleft p {
 
 div.thumb {
 	margin-bottom: 0.5em;
-	border-style: solid;
-	border-color: #fafafa;
 	width: auto;
-	background-color: transparent;
 }
 
 div.thumbinner {
 	border: 1px solid #cccccc;
 	padding: 3px !important;
 	background-color: #f9f9f9;
-	font-size: 94%;
+	font-size: 1.4em;
+	line-height: 1.4em;
 	text-align: center;
 	overflow: hidden;
 }
@@ -438,6 +445,7 @@ div.thumbinner {
 img.thumbimage {
 	border: none;
 	padding: 0px;
+	margin: 0px;
 }
 
 .thumbinner>a {
@@ -447,9 +455,7 @@ img.thumbimage {
 .thumbcaption {
 	border: none;
 	text-align: left;
-	line-height: 1.4em;
 	padding: 3px !important;
-	font-size: 94%;
 }
 
 div.magnify {
@@ -468,18 +474,17 @@ div.magnify img {
 div.tright {
 	clear: right;
 	float: right;
-	border-width: 0.5em 0 0.8em 1.4em;
+	margin-left: 1.4em;
 }
 
 div.tleft {
 	float: left;
 	clear: left;
-	margin-right: 0.5em;
-	border-width: 0.5em 1.4em 0.8em 0;
+	margin-right: 1.4em;
 }
 
 img.thumbborder {
-	border: 1px solid #dddddd;
+	border: 1px solid #aaaaaa;
 }
 
 .hiddenStructure {
