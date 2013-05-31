@@ -321,6 +321,11 @@ hr {
 	margin-right: auto;
 }
 
+/* stop "larger" from .warning multiplying with "1.6em" from p */
+.warning p {
+	font-size: 100%;
+}
+
 /* Main Links */
 .entry-content a {
 	border-bottom: 1px solid #aaaaaa;
