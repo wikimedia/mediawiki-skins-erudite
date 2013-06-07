@@ -1,0 +1,4 @@
+Test that it works fine with ULS extension
+Use consistent units everywhere; fonts are currently mixed px / pt / % / em
+Use simpler CSS rules for main content, rather than children of .entry-content
+Add small screen CSS rules, specifically to have the top menu and footer columns stack vertically and to remove the min-width (and width where appropriate) settings

@@ -16,7 +16,8 @@ $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'name' => 'Erudite',
 	'url' => 'https://www.mediawiki.org/wiki/Skin:Erudite',
-	'author' => array( 'Matt Wiebe', 'Colin Andrew Ferm', 'Nick White' ),
+	'author' => array( 'Nick White', 'Matt Wiebe', 'Colin Andrew Ferm' ),
+	'version' => '1.0',
 	'descriptionmsg' => 'erudite-desc',
 );
 
