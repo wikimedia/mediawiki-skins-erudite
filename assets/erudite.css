@@ -12,7 +12,7 @@
 #header,
 #access,
 #footer-wrap-inner {
-	min-width: 96em;
+	min-width: 960px;
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
@@ -30,7 +30,6 @@
 /* Use dark stripes around edge to focus on content */
 div#container {
 	background: white;
-	padding-top: 2em;
 }
 
 div#wrapper {
@@ -41,16 +40,13 @@ div#wrapper {
 /* Typography Base */
 body {
 	font-family: constantia, 'hoefler text', 'palatino linotype', serif;
-	font-size: 10px;
+	/* 62.5% = 10px by default for browsers; allows theme to scale if users
+	 * set different a font size in their browser, while having 1em default
+	 * to 10px for easy calculations. */
+	font-size: 62.5%;
 	line-height: 1.5;
 	background: #fafafa;
 	color: #333333;
-}
-
-textarea,
-select,
-input {
-	font-size: 12px;
 }
 
 h1,
@@ -150,13 +146,16 @@ a.new {
 	padding: 1em 0;
 }
 
-#header h1,
-#header h1 a {
+#header h1 {
 	color: #ffffff;
 	text-decoration: none;
-	font-size: 36px;
+	font-size: 3.6em;
 	line-height: 1;
 	margin: 0;
+}
+
+#header a {
+	color: #ffffff;
 }
 
 #siteSubtitle {
@@ -321,11 +320,6 @@ hr {
 	margin-right: auto;
 }
 
-/* stop "larger" from .warning multiplying with "1.6em" from p */
-.warning p {
-	font-size: 100%;
-}
-
 /* Main Links */
 .entry-content a {
 	border-bottom: 1px solid #aaaaaa;
@@ -339,9 +333,9 @@ hr {
 /* Meta (edit links etc.) */
 .entry-meta {
 	float: right;
-	padding-left: 15px;
-	margin-left: 15px;
-	margin-bottom: 10px;
+	padding-left: 1.5em;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
 	border-left: 1px solid #aaaaaa;
 }
 
@@ -361,7 +355,7 @@ hr {
 }
 
 span.editsection {
-	font-size: 10pt;
+	font-size: 0.65em; /* 2em (h2) * 0.65em = 1.3em */
 }
 
 .toc,
@@ -370,22 +364,22 @@ span.editsection {
 }
 
 #bodyContent > ul > li {
-	margin-left: 10pt;
+	margin-left: 1em;
 }
 
 div.entry-content li {
-	margin-left: 30px;
+	margin-left: 2em;
 }
 
 span.entry-sub-title {
-	margin-left: 40px;
-	font-size: 10pt;
+	margin-left: 1em;
+	font-size: 1.3em;
 	font-style: italic;
 }
 
 /* References */
 .reference {
-	font-size: 8pt;
+	font-size: 0.875em; /* 1.6em * 0.875em = 1.4em */
 }
 
 ol.references > li:target {
@@ -460,7 +454,7 @@ img.thumbimage {
 .thumbcaption {
 	border: none;
 	text-align: left;
-	padding: 3px !important;
+	padding: 0.1875em !important; /* 1.6em * 0.1875em = 0.3em */
 }
 
 div.magnify {
@@ -505,36 +499,11 @@ table.gallery td {
 	border: 2px solid #fafafa;
 }
 
-/* Category pages */
-div.entry-content div#mw-pages table tbody tr td h3 {
-	font-size: 15pt;
-}
-
-div.entry-content div#mw-subcategories table tbody tr td h3 {
-	font-size: 15pt;
-}
-
-div#content-container div.entry-content div#mw-pages table tbody tr td ul {
-	font-size: 6pt;
-}
-
-div#content-container div.entry-content div#mw-subcategories table tbody tr td ul {
-	font-size: 6pt;
-}
-
-
-div.mw-spcontent form {
-	margin-bottom: 10pt;
-}
-
-/* Protect pages */
-form#mw-Protect-Form fieldset table {
-	font-size: 8pt;
-}
-
-/* Special Pages */
+/* Category and Special Page lists */
+#mw-pages ul,
+#mw-subcategories ul,
 table.mw-specialpages-table tbody tr td ul {
-	font-size: 6pt;
+	font-size: 0.875em; /* 1.6em * 0.875em = 1.4em */
 }
 
 /* Category Links */
@@ -570,8 +539,12 @@ table.mw-specialpages-table tbody tr td ul {
 	width: 90%;
 	color: #ffffff;
 	background-color: #666666;
-	font-size: 13pt;
-	line-height: 36pt;
+	padding: 1.2em 0;
+}
+
+.message p {
+	padding: 0 1em;
+	font-size: 1.6em;
 }
 
 .message a:link,
@@ -585,11 +558,15 @@ table.mw-specialpages-table tbody tr td ul {
 
 .mw-search-formheader div.search-types ul li {
 	float: left;
-	margin-left: 20px;
+	margin-left: 2em;
 }
 
 div.searchresult {
-	margin-top: 15px;
+	margin-top: 1em;
+}
+
+.redirectText {
+	font-size: 1.3em;
 }
 
 .mw-jump {
@@ -610,7 +587,7 @@ img#logo {
 }
 
 div#bodyContent {
-	padding-bottom: 20px;
+	padding-bottom: 1.5em;
 }
 
 /* don't give lists massive margins when in tds */
