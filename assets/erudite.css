@@ -12,14 +12,14 @@
 #header,
 #access,
 #footer-wrap-inner {
-	min-width: 96em;
+	min-width: 960px;
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
 }
 
 #content {
-	padding: 2.4em 6em 0em 6em;
+	padding: 1.5em 3.75em 0em;
 }
 
 #header-wrap,
@@ -30,7 +30,6 @@
 /* Use dark stripes around edge to focus on content */
 div#container {
 	background: white;
-	padding-top: 2em;
 }
 
 div#wrapper {
@@ -41,63 +40,55 @@ div#wrapper {
 /* Typography Base */
 body {
 	font-family: constantia, 'hoefler text', 'palatino linotype', serif;
-	font-size: 10px;
 	line-height: 1.5;
 	background: #fafafa;
 	color: #333333;
 }
 
-textarea,
-select,
-input {
-	font-size: 12px;
-}
-
+/* use sans-serif font for headings and navigation */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.entry-meta,
+#menu,
+#footer-wrap {
 	font-family: corbel, 'gill sans', 'gill sans mt', sans-serif;
 	font-weight: normal;
-	letter-spacing: 0.05em;
 	text-rendering: optimizeLegibility;
 }
 
 h1 {
-	font-size: 2.4em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	line-height: 1;
-	margin: 1.333em 0 0.333em;
+	letter-spacing: 0.05em;
+	margin: 1.3em 0 0.3em;
 }
 
 h2 {
-	font-size: 2.0em;
+	font-size: 1.25em;
 	line-height: 1.1;
 	margin: 1em 0 0.25em;
 }
 
 h3 {
-	font-size: 1.9em;
+	font-size: 1.2em;
 	line-height: 1.2;
-	margin: 1.143em 0 0.286em;
+	margin: 1.15em 0 0.3em;
 }
 
 h4 {
-	font-size: 1.8em;
+	font-size: 1.1em;
 	line-height: 1.3;
-	margin: 1.333em 0 0.333em;
+	margin: 1.3em 0 0.3em;
 }
 
 h5 {
-	font-size: 1.6em;
+	font-size: 1em;
 	margin-top: 1.5em 0 0.375em;
-}
-
-h4,
-h5 {
-	letter-spacing: 0.1em;
 }
 
 h1 + h2,
@@ -147,35 +138,37 @@ a.new {
 	background-image: url(images/stripes.png);
 	background-color: #333333;
 	background-repeat: repeat;
-	padding: 1em 0;
+	padding: 0.625em 0;
 }
 
-#header h1,
-#header h1 a {
+#header h1 {
 	color: #ffffff;
 	text-decoration: none;
-	font-size: 36px;
+	font-size: 2.25em;
 	line-height: 1;
 	margin: 0;
 }
 
+#header a {
+	color: #ffffff;
+}
+
 #siteSubtitle {
-	font-size: 1.4em;
+	font-size: 0.875em;
 	color: #ffffff;
 }
 
 /* Menu */
 #menu {
-	margin: 2.4em 0 -1em;
+	margin: 1.5em 0 -0.625em;
 	overflow: hidden;
-	padding: 1.2em 6em;
+	padding: 0.75em 3.75em;
 	border-top: 1px solid #666666;
 	background: #333333;
 	background: rgba(50, 50, 50, 0.7);
 }
 
 #menu a {
-	font-family: corbel, 'gill sans', 'gill sans mt', sans-serif;
 	text-transform: uppercase;
 	color: #ffffff;
 }
@@ -184,33 +177,36 @@ a.new {
 	display: block;
 	float: left;
 	margin-right: 2em;
-	font-size: 1.6em;
 }
 
 /* Footer */
 #footer-wrap {
-	font-family: corbel, 'gill sans', 'gill sans mt', sans-serif;
 	background: #333333;
 	clear: both;
 	color: #ffffff;
-	padding: 2.4em 0 4em;
+	padding: 1.5em 0 2.5em;
 }
 
 .footer {
-	min-width: 24em;
+	min-width: 240px;
 	width: 25%;
 	float: left;
-	margin-left: 6em;
+	margin-left: 60px;
 }
 
 .footer .widget li {
-	font-size: 1.4em;
+	font-size: 0.875em;
+}
+
+.footer .widget p {
+	font-size: 0.75em;
 }
 
 .footer h3 {
 	border-bottom: 1px solid #666666;
-	font-size: 2.1em;
+	font-size: 1.25em;
 	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 .footer a,
@@ -233,14 +229,14 @@ a.new {
 /* Footer to content (for FooterLinks) */
 #footer {
 	text-align: right;
-	padding: 2ex 0;
+	padding: 0.75em 0;
+	font-size: 0.75em;
 }
 
 /* Content */
 #content-container {
 	position: relative;
 	margin: 0;
-	min-height: 21.6em;
 	clear: both;
 	overflow: hidden;
 }
@@ -265,13 +261,9 @@ hr {
 .entry-content li,
 .entry-content dt,
 .entry-content dd,
+.entry-content blockquote,
 .entry-content center {
-	font-size: 1.6em;
 	margin-bottom: 0.75em;
-}
-
-.entry-content li li {
-	font-size: 1em;
 }
 
 .entry-content table {
@@ -285,16 +277,15 @@ hr {
 }
 
 .entry-content pre {
-	font-size: 1.4em;
+	font-size: 0.875em;
 }
 
 .entry-content legend {
-	font-size: 1.4em;
+	font-size: 0.875em;
 	text-align: center;
 }
 
 .entry-content blockquote {
-	font-size: 1.6em;
 	padding-left: 3em;
 }
 
@@ -321,11 +312,6 @@ hr {
 	margin-right: auto;
 }
 
-/* stop "larger" from .warning multiplying with "1.6em" from p */
-.warning p {
-	font-size: 100%;
-}
-
 /* Main Links */
 .entry-content a {
 	border-bottom: 1px solid #aaaaaa;
@@ -339,15 +325,15 @@ hr {
 /* Meta (edit links etc.) */
 .entry-meta {
 	float: right;
-	padding-left: 15px;
-	margin-left: 15px;
-	margin-bottom: 10px;
+	padding-left: 1em;
+	margin-left: 1em;
+	margin-bottom: 0.625em;
 	border-left: 1px solid #aaaaaa;
 }
 
 .entry-meta span {
 	display: block;
-	font-size: 1.1em;
+	font-size: 0.75em;
 	font-style: italic;
 	padding: 0.4em 0;
 }
@@ -361,7 +347,7 @@ hr {
 }
 
 span.editsection {
-	font-size: 10pt;
+	font-size: 0.75em;
 }
 
 .toc,
@@ -370,22 +356,23 @@ span.editsection {
 }
 
 #bodyContent > ul > li {
-	margin-left: 10pt;
+	margin-left: 1em;
 }
 
 div.entry-content li {
-	margin-left: 30px;
+	margin-left: 2em;
 }
 
 span.entry-sub-title {
-	margin-left: 40px;
-	font-size: 10pt;
+	margin-left: 1em;
+	margin-bottom: 2em;
+	font-size: 0.875em;
 	font-style: italic;
 }
 
 /* References */
 .reference {
-	font-size: 8pt;
+	font-size: 0.875em;
 }
 
 ol.references > li:target {
@@ -441,8 +428,8 @@ div.thumbinner {
 	border: 1px solid #cccccc;
 	padding: 3px !important;
 	background-color: #f9f9f9;
-	font-size: 1.4em;
-	line-height: 1.4em;
+	font-size: 0.875em;
+	line-height: 1.4;
 	text-align: center;
 	overflow: hidden;
 }
@@ -460,7 +447,7 @@ img.thumbimage {
 .thumbcaption {
 	border: none;
 	text-align: left;
-	padding: 3px !important;
+	padding: 0.1875em !important;
 }
 
 div.magnify {
@@ -479,13 +466,13 @@ div.magnify img {
 div.tright {
 	clear: right;
 	float: right;
-	margin-left: 1.4em;
+	margin-left: 1em;
 }
 
 div.tleft {
 	float: left;
 	clear: left;
-	margin-right: 1.4em;
+	margin-right: 1em;
 }
 
 img.thumbborder {
@@ -505,36 +492,11 @@ table.gallery td {
 	border: 2px solid #fafafa;
 }
 
-/* Category pages */
-div.entry-content div#mw-pages table tbody tr td h3 {
-	font-size: 15pt;
-}
-
-div.entry-content div#mw-subcategories table tbody tr td h3 {
-	font-size: 15pt;
-}
-
-div#content-container div.entry-content div#mw-pages table tbody tr td ul {
-	font-size: 6pt;
-}
-
-div#content-container div.entry-content div#mw-subcategories table tbody tr td ul {
-	font-size: 6pt;
-}
-
-
-div.mw-spcontent form {
-	margin-bottom: 10pt;
-}
-
-/* Protect pages */
-form#mw-Protect-Form fieldset table {
-	font-size: 8pt;
-}
-
-/* Special Pages */
+/* Category and Special Page lists */
+#mw-pages ul,
+#mw-subcategories ul,
 table.mw-specialpages-table tbody tr td ul {
-	font-size: 6pt;
+	font-size: 0.875em;
 }
 
 /* Category Links */
@@ -550,7 +512,7 @@ table.mw-specialpages-table tbody tr td ul {
 	padding: 0 1em;
 	line-height: 2;
 	height: 100%;
-	font-size: 1.2em;
+	font-size: 0.75em;
 	display: inline;
 }
 
@@ -570,8 +532,11 @@ table.mw-specialpages-table tbody tr td ul {
 	width: 90%;
 	color: #ffffff;
 	background-color: #666666;
-	font-size: 13pt;
-	line-height: 36pt;
+	padding: 0.75em 0;
+}
+
+.message p {
+	padding: 0 1em;
 }
 
 .message a:link,
@@ -585,11 +550,15 @@ table.mw-specialpages-table tbody tr td ul {
 
 .mw-search-formheader div.search-types ul li {
 	float: left;
-	margin-left: 20px;
+	margin-left: 2em;
 }
 
 div.searchresult {
-	margin-top: 15px;
+	margin-top: 1em;
+}
+
+.redirectText {
+	font-size: 0.875em;
 }
 
 .mw-jump {
@@ -598,7 +567,7 @@ div.searchresult {
 	left: 1em;
 	z-index: 1;
 	color: #ffffff;
-	font-size: 1.25em;
+	font-size: 0.75em;
 }
 .mw-jump a {
 	color: #ffffff;
@@ -610,7 +579,7 @@ img#logo {
 }
 
 div#bodyContent {
-	padding-bottom: 20px;
+	padding-bottom: 1.5em;
 }
 
 /* don't give lists massive margins when in tds */
@@ -621,7 +590,7 @@ div#bodyContent {
 
 /* reduce h3 top margin in a table, so can be used as a table title */
 table h3 {
-	margin-top: 1ex;
+	margin-top: 0.5em;
 }
 
 /* ensure edit form doesn't clear the right floated meta

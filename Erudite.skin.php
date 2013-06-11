@@ -71,7 +71,7 @@ class EruditeTemplate extends BaseTemplate {
 			}
 		?>
 		<div id="header" role="banner">
-			<h1 id="siteTitle"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
+			<h1 id="siteTitle"><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
 			<div id="siteSubtitle"><?php $this->msg( 'tagline' ) ?></div>
 		</div>
 
@@ -95,9 +95,9 @@ class EruditeTemplate extends BaseTemplate {
 		<?php
 			foreach( array( 'newtalk', 'sitenotice', 'subtitle', 'undelete' ) as $msg ) {
 				if( $this->data[$msg] ) {
-					echo "<div id='$msg' class='message'>";
+					echo "<div id='$msg' class='message'><p>";
 					$this->html( $msg );
-					echo '</div>';
+					echo '</p></div>';
 				}
 			}
 		?>
@@ -108,7 +108,7 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="content-container">
 				<h1 class="entry-title"><?php $this->html( 'title' ); ?></h1>
 				<?php if ( $this->data['subtitle'] ) { ?>
-					<span class="entry-sub-title"><?php $this->html( 'subtitle' ) ?></span><br/><br/>
+					<span class="entry-sub-title"><?php $this->html( 'subtitle' ) ?></span>
 				<?php } ?>
 
 				<div class="entry-meta">
