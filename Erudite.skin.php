@@ -71,7 +71,7 @@ class EruditeTemplate extends BaseTemplate {
 			}
 		?>
 		<div id="header" role="banner">
-			<h1 id="siteTitle"><span><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></span></h1>
+			<h1 id="siteTitle"><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
 			<div id="siteSubtitle"><?php $this->msg( 'tagline' ) ?></div>
 		</div>
 
@@ -95,9 +95,9 @@ class EruditeTemplate extends BaseTemplate {
 		<?php
 			foreach( array( 'newtalk', 'sitenotice', 'subtitle', 'undelete' ) as $msg ) {
 				if( $this->data[$msg] ) {
-					echo "<div id='$msg' class='message'>";
+					echo "<div id='$msg' class='message'><p>";
 					$this->html( $msg );
-					echo '</div>';
+					echo '</p></div>';
 				}
 			}
 		?>
