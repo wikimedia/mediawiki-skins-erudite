@@ -27,8 +27,8 @@ $wgExtensionMessagesFiles['Erudite'] = dirname(__FILE__) . '/Erudite.i18n.php';
 
 $wgResourceModules['skins.erudite'] = array(
 	'styles' => array(
-		'erudite/assets/cssreset.css' => array( 'media' => 'screen' ),
-		'erudite/assets/erudite.css' => array( 'media' => 'screen' ),
+		'erudite/assets/cssreset.css' => array( 'media' => 'all' ),
+		'erudite/assets/erudite.css' => array( 'media' => 'all' ),
 		'erudite/assets/print.css' => array( 'media' => 'print' ),
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
