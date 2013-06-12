@@ -1,4 +1,3 @@
 Test that it works fine with ULS extension
 Use simpler CSS rules for main content, rather than children of .entry-content
 Set line-height consistently throughout (and ensure it isn't used in lieu of padding)
-Add small screen CSS rules, specifically to have the top menu and footer columns stack vertically and to remove the min-width (and width where appropriate) settings
