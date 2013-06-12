@@ -12,6 +12,14 @@ class SkinErudite extends SkinTemplate {
 	var $skinname = 'erudite', $stylename = 'erudite',
 		$template = 'EruditeTemplate', $useHeadElement = true;
 
+	public function initPage( OutputPage $out ) {
+		parent::initPage( $out );
+
+		$out->addHeadItem( 'viewport',
+			'<meta name="viewport" content="width=device-width">'
+		);
+	}
+
 	/**
 	 * @param $out OutputPage object
 	 */
