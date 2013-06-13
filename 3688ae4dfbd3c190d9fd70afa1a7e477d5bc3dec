@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D07bcnBA",
+        "filename": "assets/erudite.css",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-13T23:01:46Z",
+      "side": 1,
+      "message": "why 80em out of interest? When using em\u0027s it would be good to document how they were calculated so that a new developer can find them readable.",
+      "revId": "3688ae4dfbd3c190d9fd70afa1a7e477d5bc3dec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
