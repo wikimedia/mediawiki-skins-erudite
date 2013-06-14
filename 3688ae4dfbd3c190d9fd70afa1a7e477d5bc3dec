@@ -16,6 +16,24 @@
       "revId": "3688ae4dfbd3c190d9fd70afa1a7e477d5bc3dec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D041U5lI",
+        "filename": "assets/erudite.css",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 504
+      },
+      "writtenOn": "2013-06-14T11:17:51Z",
+      "side": 1,
+      "message": "80em just because it ensures a not too long line length, after taking padding into account. To me that\u0027s obvious (and moreover much clearer in terms of ems than pixels). Do you really think it\u0027s worth documenting?",
+      "parentUuid": "D07bcnBA",
+      "revId": "3688ae4dfbd3c190d9fd70afa1a7e477d5bc3dec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
