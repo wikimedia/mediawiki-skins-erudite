@@ -60,32 +60,28 @@ h6,
 h1 {
 	font-size: 1.5em;
 	text-transform: uppercase;
-	line-height: 1;
 	letter-spacing: 0.05em;
-	margin: 1.3em 0 0.3em;
+	margin-top: 1.3em;
 }
 
 h2 {
 	font-size: 1.25em;
-	line-height: 1.1;
-	margin: 1em 0 0.25em;
+	margin-top: 1em;
 }
 
 h3 {
 	font-size: 1.2em;
-	line-height: 1.2;
-	margin: 1.15em 0 0.3em;
+	margin-top: 1.15em;
 }
 
 h4 {
 	font-size: 1.1em;
-	line-height: 1.3;
-	margin: 1.3em 0 0.3em;
+	margin-top: 1.3em;
 }
 
 h5 {
 	font-size: 1em;
-	margin-top: 1.5em 0 0.375em;
+	margin-top: 1.5em;
 }
 
 h1 + h2,
@@ -200,6 +196,7 @@ a.new {
 
 .footer h3 {
 	border-bottom: 1px solid #666666;
+	margin-bottom: 0.2em;
 	font-size: 1.25em;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -251,7 +248,6 @@ hr {
 .entry-title {
 	color: #555555;
 	margin: 0 0 0.5em;
-	line-height: 1.5;
 }
 
 .entry-content p,
@@ -426,7 +422,6 @@ div.thumbinner {
 	padding: 3px !important;
 	background-color: #f9f9f9;
 	font-size: 0.875em;
-	line-height: 1.4;
 	text-align: center;
 	overflow: hidden;
 }
@@ -507,7 +502,6 @@ table.mw-specialpages-table tbody tr td ul {
 #catlinks a {
 	color: #ffffff;
 	padding: 0 1em;
-	line-height: 2;
 	height: 100%;
 	font-size: 0.75em;
 	display: inline;
