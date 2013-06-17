@@ -170,6 +170,7 @@ a.new {
 	display: block;
 	float: left;
 	margin-right: 2em;
+	margin-bottom: 0em;
 }
 
 /* Footer */
@@ -184,6 +185,15 @@ a.new {
 	float: left;
 	width: 25%;
 	margin-left: 5%;
+}
+
+.footer li {
+	list-style: none;
+	margin: 0em;
+}
+
+.footer ul {
+	margin: 0em;
 }
 
 .footer .widget li {
@@ -228,6 +238,10 @@ a.new {
 	font-size: 0.75em;
 }
 
+#footer p {
+	margin-bottom: 0em;
+}
+
 /* Content */
 #content-container {
 	position: relative;
@@ -250,49 +264,41 @@ hr {
 	margin: 0 0 0.5em;
 }
 
-.entry-content p,
-.entry-content li,
-.entry-content dt,
-.entry-content dd,
-.entry-content blockquote,
-.entry-content center {
+p,
+li,
+dt,
+dd,
+blockquote,
+center {
 	margin-bottom: 0.75em;
 }
 
-.entry-content table {
+table {
 	margin: 1em 0;
 }
 
-.entry-content td,
-.entry-content th {
+td,
+th {
 	padding: 0.125em 0.5em;
 	text-align: left;
 }
 
-.entry-content pre {
+pre {
 	font-size: 0.875em;
 }
 
-.entry-content legend {
+legend {
 	font-size: 0.875em;
 	text-align: center;
 }
 
-.entry-content blockquote {
+blockquote {
 	padding-left: 3em;
 }
 
-.entry-content ul li {
-	list-style: disc outside;
-}
-
-.entry-content ol li {
-	list-style: decimal outside;
-}
-
-.entry-content li ol,
-.entry-content li ul {
-	margin: 0.5em 0 0 0.5em;
+li {
+	list-style-position: outside;
+	margin-left: 2em;
 }
 
 .center {
@@ -347,15 +353,6 @@ span.editsection {
 #toc {
 	display: none;
 }
-
-#bodyContent > ul > li {
-	margin-left: 1em;
-}
-
-div.entry-content li {
-	margin-left: 2em;
-}
-
 span.entry-sub-title {
 	margin-left: 1em;
 	margin-bottom: 2em;
@@ -624,6 +621,10 @@ body.action-edit #wpTextbox1 {
 
 	#content {
 		padding: 1em 2em 0em;
+	}
+
+	#menu {
+		margin-top: 1em;
 	}
 }
 

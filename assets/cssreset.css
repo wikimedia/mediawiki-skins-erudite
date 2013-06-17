@@ -71,10 +71,6 @@ table {
 	border-spacing: 0;
 }
 
-ol,ul {
-	list-style: none;
-}
-
 sup {
 	vertical-align: super;
 }
