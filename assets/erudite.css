@@ -102,6 +102,15 @@ h5 + h6 {
 	margin-top: 0;
 }
 
+td > h1:first-child,
+td > h2:first-child,
+td > h3:first-child,
+td > h4:first-child,
+td > h5:first-child,
+td > h6:first-child {
+	margin-top: 0;
+}
+
 pre,
 code {
 	font-family: consolas, 'deja vu sans mono', 'lucida sans typewriter', monaco, monospace;
@@ -169,8 +178,7 @@ a.new {
 #menu li {
 	display: block;
 	float: left;
-	margin-right: 2em;
-	margin-bottom: 0em;
+	margin: 0em 2em 0em 0em;
 }
 
 /* Footer */
@@ -296,11 +304,6 @@ blockquote {
 	padding-left: 3em;
 }
 
-li {
-	list-style-position: outside;
-	margin-left: 2em;
-}
-
 .center {
 	width: 100%;
 	text-align: center;
@@ -365,11 +368,8 @@ span.entry-sub-title {
 	font-size: 0.875em;
 }
 
+sup.reference:target,
 ol.references > li:target {
-	background-color: #ddeeff;
-}
-
-sup.reference:target {
 	background-color: #ddeeff;
 }
 
@@ -429,7 +429,7 @@ img.thumbimage {
 	margin: 0px;
 }
 
-.thumbinner>a {
+.thumbinner > a {
 	border: none;
 }
 
@@ -564,17 +564,6 @@ img#logo {
 
 div#bodyContent {
 	padding-bottom: 1.5em;
-}
-
-/* don't give lists massive margins when in tds */
-.mw-content-ltr ul,
-.mw-content-rtl ul {
-	margin-left: 0em;
-}
-
-/* reduce h3 top margin in a table, so can be used as a table title */
-table h3 {
-	margin-top: 0.5em;
 }
 
 /* ensure edit form doesn't clear the right floated meta
