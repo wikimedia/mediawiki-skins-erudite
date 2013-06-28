@@ -646,4 +646,9 @@ body.action-edit #wpTextbox1 {
 		border: none;
 		padding: 0em;
 	}
+
+	/* disable text justification (user preference) */
+	#article, #bodyContent, #mw_content {
+		text-align: left !important;
+	}
 }
