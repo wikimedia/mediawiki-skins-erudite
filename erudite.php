@@ -4,9 +4,9 @@
  *
  * @file
  * @ingroup Skins
+ * @author Nick White
  * @author Matt Wiebe
  * @author Colin Andrew Ferm
- * @author Nick White
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 

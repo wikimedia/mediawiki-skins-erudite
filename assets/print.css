@@ -1,3 +1,4 @@
+/* Hide navigation elements */
 #header-wrap,
 #mw-js-message,
 .entry-meta,
@@ -5,6 +6,7 @@
 	display:none;
 }
 
+/* Ensure footer text with URL isn't justified */
 .printfooter {
-	text-align: left;
+	text-align: left !important;
 }

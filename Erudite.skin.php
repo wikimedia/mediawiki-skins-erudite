@@ -1,7 +1,6 @@
 <?php
 /**
  * Erudite skin
- * Based off The Erudite skin for Wordpress.
  *
  * @file
  * @ingroup Skins
@@ -15,6 +14,9 @@ class SkinErudite extends SkinTemplate {
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
 
+		/* Assures mobile devices that the site doesn't assume traditional
+		 * desktop dimensions, so they won't downscale and will instead respect
+		 * things like CSS's @media rules */
 		$out->addHeadItem( 'viewport',
 			'<meta name="viewport" content="width=device-width">'
 		);
@@ -32,6 +34,10 @@ class SkinErudite extends SkinTemplate {
 class EruditeTemplate extends BaseTemplate {
 	/**
 	 * Like msgWiki() but it ensures edit section links are never shown.
+	 *
+	 * Needed for Mediawiki 1.19 & 1.20 due to bug 36975:
+	 * https://bugzilla.wikimedia.org/show_bug.cgi?id=36975
+	 *
 	 * @param $message Name of wikitext message to return
 	 */
 	function msgWikiNoEdit( $message ) {

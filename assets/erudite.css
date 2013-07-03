@@ -16,16 +16,16 @@
 
 
 /* Use dark stripes around edge to focus on content */
-div#container {
-	background: white;
-}
-
 div#wrapper {
 	/* @embed */
 	background: #fafafa url(images/stripes-dark.png);
 }
 
-/* Typography Base */
+div#container {
+	background: white;
+}
+
+/* Typography base */
 body {
 	font-family: constantia, 'hoefler text', 'palatino linotype', serif;
 	line-height: 1.5;
@@ -33,7 +33,7 @@ body {
 	color: #333333;
 }
 
-/* use sans-serif font for headings and navigation */
+/* Use sans-serif font for headings and navigation */
 h1,
 h2,
 h3,
@@ -48,6 +48,13 @@ h6,
 	text-rendering: optimizeLegibility;
 }
 
+/* Set attractive monospace fonts */
+pre,
+code {
+	font-family: consolas, 'deja vu sans mono', 'lucida sans typewriter', monaco, monospace;
+}
+
+/* Headings */
 h1 {
 	font-size: 1.5em;
 	text-transform: uppercase;
@@ -100,11 +107,6 @@ td > h4:first-child,
 td > h5:first-child,
 td > h6:first-child {
 	margin-top: 0;
-}
-
-pre,
-code {
-	font-family: consolas, 'deja vu sans mono', 'lucida sans typewriter', monaco, monospace;
 }
 
 /* Links */
@@ -557,7 +559,7 @@ div#bodyContent {
 	padding-bottom: 1.5em;
 }
 
-/* ensure edit form doesn't clear the right floated meta
+/* Ensure edit form doesn't clear the right floated meta
  * (.action-edit is selected so that preview content is cleared) */
 body.action-edit #editform,
 body.action-edit #toolbar,
@@ -565,9 +567,9 @@ body.action-edit #wpTextbox1 {
 	clear: none;
 }
 
-/* adjustments for smaller browser viewports */
+/* Adjustments for smaller browser viewports */
 @media (max-width: 66em) {
-	/* top menu is likely to start wrapping, so reduce padding
+	/* The top menu is likely to start wrapping, so reduce padding
 	 * and add a separator */
 	#menu {
 		padding: 0.7em 1em 0.45em;
@@ -591,7 +593,7 @@ body.action-edit #wpTextbox1 {
 }
 
 @media (max-width: 60em) {
-	/* some of the padding is best dispatched with */
+	/* Some of the padding is best dispatched with */
 	#container,
 	#header,
 	#footer-wrap-inner,
@@ -609,12 +611,12 @@ body.action-edit #wpTextbox1 {
 }
 
 @media (max-width: 40em) {
-	/* shave padding back a bit further */
+	/* Reduce padding a bit further */
 	#content {
 		padding: 1em 1em 0em;
 	}
 
-	/* stack footer columns */
+	/* Stack footer columns */
 	.footer {
 		display: block;
 		float: none;
@@ -631,14 +633,14 @@ body.action-edit #wpTextbox1 {
 		margin-top: 0.5em;
 	}
 
-	/* stack top menu items */
+	/* Stack top menu items */
 	#menu li {
 		float: none !important;
 		border: none;
 		padding: 0em;
 	}
 
-	/* disable text justification (user preference) */
+	/* Disable text justification (user preference) */
 	#article, #bodyContent, #mw_content {
 		text-align: left !important;
 	}
