@@ -8,5 +8,5 @@
 
 /* Ensure footer text with URL isn't justified */
 .printfooter {
-	text-align: left !important;
+	text-align: left;
 }
