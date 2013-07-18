@@ -1,0 +1,11 @@
+/* Reduce padding a bit further */
+#content {
+	padding: 1em 1em 0em;
+}
+
+/* Stack footer columns */
+.footer {
+	display: block;
+	float: none;
+	width: 90%;
+}

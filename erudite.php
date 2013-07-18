@@ -29,6 +29,10 @@ $wgResourceModules['skins.erudite'] = array(
 	'styles' => array(
 		'erudite/assets/cssreset.css' => array( 'media' => 'screen' ),
 		'erudite/assets/erudite.css' => array( 'media' => 'screen' ),
+		'erudite/assets/erudite66em.css' => array( 'media' => 'screen and (max-width: 66em)' ),
+		'erudite/assets/erudite60em.css' => array( 'media' => 'screen and (max-width: 60em)' ),
+		'erudite/assets/erudite40em.css' => array( 'media' => 'screen and (max-width: 40em)' ),
+		'erudite/assets/erudite20em.css' => array( 'media' => 'screen and (max-width: 20em)' ),
 		'erudite/assets/print.css' => array( 'media' => 'print' ),
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],

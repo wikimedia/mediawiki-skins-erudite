@@ -1,0 +1,19 @@
+#header h1 {
+	font-size: 1.75em;
+}
+
+#menu {
+	margin-top: 0.5em;
+}
+
+/* Stack top menu items */
+#menu li {
+	float: none !important;
+	border: none;
+	padding: 0em;
+}
+
+/* Disable text justification (user preference) */
+#article, #bodyContent, #mw_content {
+	text-align: left !important;
+}
