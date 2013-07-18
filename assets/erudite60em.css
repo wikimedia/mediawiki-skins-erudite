@@ -1,0 +1,15 @@
+/* Some of the padding is best dispatched with */
+#container,
+#header,
+#footer-wrap-inner,
+.message {
+	width: 100%;
+}
+
+#content {
+	padding: 1em 2em 0em;
+}
+
+#menu {
+	margin-top: 1em;
+}

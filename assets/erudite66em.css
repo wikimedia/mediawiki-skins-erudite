@@ -1,0 +1,21 @@
+/* The top menu is likely to start wrapping, so reduce padding
+ * and add a separator */
+#menu {
+	padding: 0.7em 1em 0.45em;
+	background: rgba(50, 50, 50, 1.0);
+}
+
+#menu li {
+	border-right: thin solid #666666;
+	padding: 0em 1em;
+	margin-bottom: 0.3em;
+	margin-right: 0em;
+}
+
+#menu li:last-child {
+	border-right: none;
+}
+
+#access {
+	width: 100%;
+}
