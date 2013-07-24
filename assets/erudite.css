@@ -470,6 +470,10 @@ table.gallery td {
 	border: thin solid #fafafa;
 }
 
+table.mw-specialpages-table {
+	margin-top: 0;
+}
+
 /* Category and Special Page lists */
 #mw-pages ul,
 #mw-subcategories ul,
