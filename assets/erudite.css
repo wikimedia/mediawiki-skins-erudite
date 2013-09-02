@@ -16,13 +16,26 @@
 
 
 /* Use dark stripes around edge to focus on content */
-div#wrapper {
+#wrapper {
 	/* @embed */
 	background: #fafafa url(images/stripes-dark.png);
 }
 
-div#container {
+#container {
 	background: white;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-color: #ccc;
+	border-width: thin;
+}
+
+/* Add borders so the sides line up with #container */
+#access {
+	border-left-style: solid;
+	border-right-style: solid;
+	border-color: #333;
+	border-color: rgba(50, 50, 50, 0.7);
+	border-width: thin;
 }
 
 /* Typography base */
@@ -156,10 +169,9 @@ a.new {
 
 /* Menu */
 #menu {
-	margin: 1.5em 0 -0.625em;
+	margin: 1em 0 -0.625em;
 	overflow: hidden;
 	padding: 0.75em 2em 0.75em 3.75em;
-	border-top: thin solid #666666;
 	background: #333333;
 	background: rgba(50, 50, 50, 0.7);
 }
@@ -321,7 +333,6 @@ blockquote {
 	float: right;
 	padding-left: 1em;
 	margin-left: 1em;
-	margin-bottom: 0.625em;
 	border-left: thin solid #aaaaaa;
 }
 
