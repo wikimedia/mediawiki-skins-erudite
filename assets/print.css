@@ -6,7 +6,8 @@
 	display:none;
 }
 
-/* Ensure footer text with URL isn't justified */
+/* Ensure footer text with URL isn't justified or affected by floats */
 .printfooter {
 	text-align: left;
+	clear: both;
 }
