@@ -523,6 +523,10 @@ table.mw-specialpages-table tbody tr td ul {
 	color: #ffffff;
 	background-color: #666666;
 	padding: 0.75em 0 0.25em;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-color: #666666;
+	border-width: thin;
 }
 
 .message p, .message div {
