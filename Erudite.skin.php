@@ -86,7 +86,7 @@ class EruditeTemplate extends BaseTemplate {
 		?>
 		<div id="header" role="banner">
 			<h1 id="siteTitle"><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
-			<div id="siteSubtitle"><?php $this->msg( 'tagline' ) ?></div>
+			<div id="tagline"><?php $this->msg( 'tagline' ) ?></div>
 		</div>
 
 		<div id="access" role="navigation">
@@ -107,7 +107,7 @@ class EruditeTemplate extends BaseTemplate {
 
 		<div id="mw-js-message"></div>
 		<?php
-			foreach( array( 'newtalk', 'sitenotice', 'subtitle', 'undelete' ) as $msg ) {
+			foreach( array( 'newtalk', 'sitenotice', 'undelete' ) as $msg ) {
 				if( $this->data[$msg] ) {
 					echo "<div id='$msg' class='message'><p>";
 					$this->html( $msg );
@@ -122,7 +122,7 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="content-container">
 				<h1 class="entry-title"><?php $this->html( 'title' ); ?></h1>
 				<?php if ( $this->data['subtitle'] ) { ?>
-					<span class="entry-sub-title"><?php $this->html( 'subtitle' ) ?></span>
+					<div class="subtitle"><?php $this->html( 'subtitle' ) ?></div>
 				<?php } ?>
 
 				<div class="entry-meta">

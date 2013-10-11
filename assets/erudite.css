@@ -162,7 +162,7 @@ a.new {
 	text-decoration: none;
 }
 
-#siteSubtitle {
+#tagline {
 	font-size: 0.875em;
 	color: #ffffff;
 }
@@ -359,9 +359,8 @@ span.editsection {
 #toc {
 	display: none;
 }
-span.entry-sub-title {
-	margin-left: 1em;
-	margin-bottom: 2em;
+.subtitle {
+	margin-bottom: 1em;
 	font-size: 0.875em;
 	font-style: italic;
 }
