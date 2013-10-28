@@ -277,12 +277,16 @@ hr {
 }
 
 p,
-li,
 dt,
 dd,
 blockquote,
 center {
 	margin-bottom: 0.75em;
+}
+
+li {
+	margin-bottom: 0.375em;
+	margin-top: 0.375em;
 }
 
 table {
@@ -355,10 +359,32 @@ span.editsection {
 	font-size: 0.75em;
 }
 
-.toc,
-#toc {
-	display: none;
+.toc tbody,
+#toc tbody {
+	border: thin solid #aaa;
 }
+
+.toc li,
+#toc li {
+	list-style: none;
+}
+
+.toc #toctitle,
+#toc #toctitle {
+	text-align: center;
+}
+
+.toc h2,
+#toc h2 {
+	margin-top: 0em;
+	display: inline;
+}
+
+.toc td,
+#toc td {
+	padding: 0.25em 1em;
+}
+
 .subtitle {
 	margin-bottom: 1em;
 	font-size: 0.875em;
