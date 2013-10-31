@@ -39,9 +39,39 @@
 }
 
 /* Typography base */
+@font-face {
+	font-family: 'Linux Libertine';
+	src: url('fonts/LinLibertine_R.woff');
+}
+
+@font-face {
+	font-family: 'Linux Libertine';
+	font-style: italic;
+	src: url('fonts/LinLibertine_RI.woff');
+}
+
+@font-face {
+	font-family: 'Linux Libertine';
+	font-weight: bold;
+	src: url('fonts/LinLibertine_RB.woff');
+}
+
+@font-face {
+	font-family: 'Linux Libertine';
+	font-style: italic;
+	font-weight: bold;
+	src: url('fonts/LinLibertine_RBI.woff');
+}
+
+@font-face {
+	font-family: 'Linux Biolinum';
+	src: url('fonts/LinBiolinum_R.woff');
+}
+
 body {
-	font-family: constantia, 'hoefler text', 'palatino linotype', serif;
+	font-family: 'Linux Libertine', constantia, 'hoefler text', 'palatino linotype', serif;
 	line-height: 1.4;
+	font-size: 1.125em;
 	background: #fafafa;
 	color: #333333;
 }
@@ -56,7 +86,7 @@ h6,
 .entry-meta,
 #menu,
 #footer-wrap {
-	font-family: corbel, 'gill sans', 'gill sans mt', sans-serif;
+	font-family: 'Linux Biolinum', corbel, 'gill sans', 'gill sans mt', sans-serif;
 	font-weight: normal;
 	text-rendering: optimizeLegibility;
 }
@@ -71,7 +101,6 @@ code {
 h1 {
 	font-size: 1.5em;
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
 	margin-top: 1.3em;
 }
 
@@ -171,7 +200,7 @@ a.new {
 #menu {
 	margin: 1em 0 -0.625em;
 	overflow: hidden;
-	padding: 0.75em 2em 0.75em 3.75em;
+	padding: 0.5em 2em 0.5em 3.75em;
 	background: #333333;
 	background: rgba(50, 50, 50, 0.7);
 }
@@ -223,7 +252,6 @@ a.new {
 	margin-bottom: 0.2em;
 	font-size: 1.25em;
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
 }
 
 .footer a,
