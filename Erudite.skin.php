@@ -57,8 +57,6 @@ class EruditeTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
-		global $wgEruditeBannerImg;
-
 		$this->html( 'headelement' );
 
 		if ( !isset( $this->data['sitename'] ) ) {
@@ -77,13 +75,8 @@ class EruditeTemplate extends BaseTemplate {
 		<div id="wrapper" class="hfeed">
 
 		<!-- header -->
-		<?php
-			if ( isset( $wgEruditeBannerImg ) ) {
-				echo "<div id='header-wrap' style='background-image: url($wgEruditeBannerImg)'>";
-			} else {
-				echo '<div id="header-wrap">';
-			}
-		?>
+		<div id="header-wrap">
+
 		<div id="header" role="banner">
 			<h1 id="siteTitle"><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
 			<div id="tagline"><?php $this->msg( 'tagline' ) ?></div>
