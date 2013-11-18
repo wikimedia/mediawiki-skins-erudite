@@ -1,8 +1,10 @@
 This skin is released under the GPLv2 or any later version. See below for the
 full license.
 
-The fonts are from Linux Liberation <http://www.linuxlibertine.org> and are
-licensed under the GPL and the OFL.
+The fonts are from Linux Libertine <http://www.linuxlibertine.org> and are
+licensed under the GPL and the OFL. They have been subsetted using the script
+assets/fonts/subset.ff, and as the font names have not been changed the subsets
+are only offered under the GPL (as OFL forbids derivatives without renaming).
 
 Copyright 2009-2013 Matt Wiebe, Nick White, Colin Andrew Ferm, Daniel Friesen
 

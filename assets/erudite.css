@@ -41,31 +41,31 @@
 /* Typography base */
 @font-face {
 	font-family: 'Linux Libertine';
-	src: url('fonts/LinLibertine_R.woff');
+	src: url('fonts/LinLibertine_R_subset.woff');
 }
 
 @font-face {
 	font-family: 'Linux Libertine';
 	font-style: italic;
-	src: url('fonts/LinLibertine_RI.woff');
+	src: url('fonts/LinLibertine_RI_subset.woff');
 }
 
 @font-face {
 	font-family: 'Linux Libertine';
 	font-weight: bold;
-	src: url('fonts/LinLibertine_RB.woff');
+	src: url('fonts/LinLibertine_RB_subset.woff');
 }
 
 @font-face {
 	font-family: 'Linux Libertine';
 	font-style: italic;
 	font-weight: bold;
-	src: url('fonts/LinLibertine_RBI.woff');
+	src: url('fonts/LinLibertine_RBI_subset.woff');
 }
 
 @font-face {
 	font-family: 'Linux Biolinum';
-	src: url('fonts/LinBiolinum_R.woff');
+	src: url('fonts/LinBiolinum_R_subset.woff');
 }
 
 body {
