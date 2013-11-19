@@ -6,7 +6,7 @@
 	top: 0.75em;
 	padding: 0.25em 0.5em;
 	background-color: #333333;
-        background-color: rgba(50, 50, 50, 0.7);
+	background-color: rgba(50, 50, 50, 0.7);
 	color: white;
 	font-family: 'Linux Biolinum', corbel, 'gill sans', 'gill sans mt', sans-serif;
 	font-size: large;
@@ -18,13 +18,15 @@
 	margin-right: 2em;
 }
 
-/* Hide menu unless it's the target */
+/* Hide menu unless it's the target, and set its background-color
+ * solid to avoid unexpected banner image tiling */
 #menu {
 	display: none;
 }
 
 #menu:target {
 	display: block;
+	background-color: #333333;
 }
 
 /* Stack top menu items */
