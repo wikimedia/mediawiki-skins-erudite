@@ -82,6 +82,7 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="tagline"><?php $this->msg( 'tagline' ) ?></div>
 		</div>
 
+		<a id="menubutton" href="#menu">Menu</a>
 		<div id="access" role="navigation">
 			<div id="menu">
 			<ul id="menu-urs" class="menu">

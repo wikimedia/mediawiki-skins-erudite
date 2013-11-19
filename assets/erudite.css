@@ -191,6 +191,10 @@ a.new {
 }
 
 /* Menu */
+#menubutton {
+	display: none;
+}
+
 #menu {
 	margin: 1em 0 -0.625em;
 	overflow: hidden;
