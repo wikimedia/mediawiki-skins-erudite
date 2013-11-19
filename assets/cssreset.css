@@ -32,8 +32,6 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
 tt,
 b,
 u,
@@ -69,12 +67,4 @@ td {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-sup {
-	vertical-align: super;
-}
-
-sub {
-	vertical-align: sub;
 }
