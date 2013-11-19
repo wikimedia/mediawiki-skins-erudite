@@ -17,8 +17,7 @@
 
 /* Use dark stripes around edge to focus on content */
 #wrapper {
-	/* @embed */
-	background: #fafafa url(images/stripes-dark.png);
+	background: #fafafa url(images/stripes-dark.svg);
 }
 
 #container {
@@ -167,8 +166,7 @@ a.new {
 
 /* Header */
 #header-wrap {
-	/* @embed */
-	background-image: url(images/stripes.png);
+	background-image: url(images/stripes.svg);
 	background-color: #333333;
 	background-repeat: repeat;
 	padding: 0.625em 0;
@@ -296,9 +294,14 @@ a.new {
 }
 
 hr {
-	/* @embed */
-	background: url(images/hr.png) center no-repeat;
-	height: 1.5em;
+	/* This hack ensures fallback to .png if .svg isn't supported 
+	 * (see http://css-tricks.com/svg-fallbacks/ ) */
+	background-image: url(images/hr.png);
+	background-image: url(images/hr.svg), none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80% 10%;
+	height: 1.25em;
 	display: block;
 	border: none;
 }
