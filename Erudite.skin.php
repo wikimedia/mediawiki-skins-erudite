@@ -87,9 +87,9 @@ class EruditeTemplate extends BaseTemplate {
 			<div id="menu">
 			<ul id="menu-urs" class="menu">
 			<?php
-				foreach( $this->data['sidebar']['navigation'] as $key => $val ) {
-					printf( '<li id="menu-item-%s" class="menu-item">', Sanitizer::escapeId( $val['id'] ) );
-					printf( '<a href="%s">%s</a>', htmlspecialchars( $val['href'] ), htmlspecialchars( $val['text'] ) );
+				foreach( $this->data['sidebar']['navigation'] as $item ) {
+					printf( '<li id="menu-item-%s" class="menu-item">', Sanitizer::escapeId( $item['id'] ) );
+					printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
 					echo "</li>\n";
 				}
 			?>
@@ -235,6 +235,30 @@ class EruditeTemplate extends BaseTemplate {
 				?>
 				</ul>
 			</li>
+
+			<?php
+				foreach( $this->data['sidebar'] as $name => $menu ) {
+					/* standard menus are already handled elsewhere */
+					if( empty($menu) ||
+					    $name == 'navigation' || 
+					    $name == 'SEARCH' || 
+					    $name == 'LANGUAGES' || 
+					    $name == 'TOOLBOX' ) {
+						continue;
+					}
+					echo "<li class='widget'>";
+					$msgObj = wfMessage( $name );
+					$heading = $msgObj->exists() ? $msgObj->text() : $name;
+					printf( '<h3>%s</h3>', htmlspecialchars( $heading ) );
+					echo "<ul>\n";
+					foreach( $menu as $item ) {
+						printf( '<li><a href="%s">%s</a></li>' . "\n", 
+						        htmlspecialchars( $item['href'] ),
+						        htmlspecialchars( $item['text'] ) );
+					}
+					echo "</ul></li>\n";
+				}
+			?>
 
 			<li class="widget">
 				<?php echo $this->msgWikiNoEdit( 'erudite-extracontent-column2' ); ?>
