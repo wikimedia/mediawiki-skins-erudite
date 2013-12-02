@@ -84,17 +84,17 @@ class EruditeTemplate extends BaseTemplate {
 
 		<a id="menubutton" href="#menu">Menu</a>
 		<div id="access" role="navigation">
-			<div id="menu">
-			<ul id="menu-urs" class="menu">
 			<?php
-				foreach( $this->data['sidebar']['navigation'] as $item ) {
-					printf( '<li id="menu-item-%s" class="menu-item">', Sanitizer::escapeId( $item['id'] ) );
-					printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
-					echo "</li>\n";
+				if( array_key_exists( 'navigation', $this->data['sidebar'] ) ) {
+					echo "<div id='menu'><ul id='menu-urs' class='menu'>\n";
+					foreach( $this->data['sidebar']['navigation'] as $item ) {
+						printf( '<li id="menu-item-%s" class="menu-item">', Sanitizer::escapeId( $item['id'] ) );
+						printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
+						echo "</li>\n";
+					}
+					echo "</ul></div>\n";
 				}
 			?>
-			</ul>
-			</div>
 		</div>
 		</div>
 		<!-- /header -->
