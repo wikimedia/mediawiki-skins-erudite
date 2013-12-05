@@ -68,36 +68,30 @@ class EruditeTemplate extends BaseTemplate {
 
 		<?php if( $this->data['showjumplinks'] ) { ?>
 		<div class="mw-jump">
-			<a href="#content"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
+			<a href="#bodyContent"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
 			<a href="#search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
 		</div>
 		<?php } ?>
-		<div id="wrapper" class="hfeed">
 
-		<!-- header -->
-		<div id="header-wrap">
-
-		<div id="header" role="banner">
-			<h1 id="siteTitle"><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
+		<div id="top-wrap" role="banner">
+			<h1><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
 			<div id="tagline"><?php $this->msg( 'tagline' ) ?></div>
-		</div>
 
-		<a id="menubutton" href="#menu">Menu</a>
-		<div id="access" role="navigation">
+			<a id="menubutton" href="#menu">Menu</a>
+			<div id="nav" role="navigation">
 			<?php
 				if( array_key_exists( 'navigation', $this->data['sidebar'] ) ) {
-					echo "<div id='menu'><ul id='menu-urs' class='menu'>\n";
+					echo "<ul id='menu'>\n";
 					foreach( $this->data['sidebar']['navigation'] as $item ) {
-						printf( '<li id="menu-item-%s" class="menu-item">', Sanitizer::escapeId( $item['id'] ) );
+						printf( '<li id="menu-item-%s">', Sanitizer::escapeId( $item['id'] ) );
 						printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
 						echo "</li>\n";
 					}
-					echo "</ul></div>\n";
+					echo "</ul>\n";
 				}
 			?>
+			</div>
 		</div>
-		</div>
-		<!-- /header -->
 
 		<div id="mw-js-message"></div>
 		<?php
@@ -110,30 +104,24 @@ class EruditeTemplate extends BaseTemplate {
 			}
 		?>
 
-		<!-- content -->
-		<div id="container">
-		<div id="content" class="mw-body" role="main">
-			<div id="content-container">
-				<h1 class="entry-title"><?php $this->html( 'title' ); ?></h1>
+		<div id="main" role="main">
+			<div id="nav-meta">
+			<?php
+				foreach ( $this->data['content_actions'] as $key => $tab ) {
+					echo $this->makeListItem( $key, $tab, array( 'tag' => 'span' ) );
+					echo '<span class="meta-sep">|</span>';
+				}
+			?>
+			</div>
+
+			<div id="bodyContent">
+				<h1><?php $this->html( 'title' ); ?></h1>
 				<?php if ( $this->data['subtitle'] ) { ?>
 					<div class="subtitle"><?php $this->html( 'subtitle' ) ?></div>
 				<?php } ?>
 
-				<div class="entry-meta">
-				<?php
-					foreach ( $this->data['content_actions'] as $key => $tab ) {
-						echo $this->makeListItem( $key, $tab, array( 'tag' => 'span' ) );
-						echo '<span class="meta-sep">|</span>';
-					}
-				?>
-				</div>
-
-				<div id="bodyContent" class="entry-content">
-
 				<?php $this->html( 'bodytext' ) ?>
 				<?php $this->html( 'dataAfterContent' ); ?>
-
-				</div>
 			</div>
 
 			<div id="footer">
@@ -159,13 +147,9 @@ class EruditeTemplate extends BaseTemplate {
 			</div>
 
 			<?php $this->html( 'catlinks' ); ?>
-
 		</div>
-		</div>
-		<!-- /content -->
 
-		<!-- footer -->
-		<div id="footer-wrap">
+		<div id="bottom-wrap">
 		<div id="footer-wrap-inner">
 
 		<div id="primary" class="footer">
@@ -284,10 +268,9 @@ class EruditeTemplate extends BaseTemplate {
 
 		</div>
 		</div>
-		<!-- /footer -->
 
-		</div>
 		<?php $this->printTrail(); ?>
+
 		</body>
 		</html>
 		<?php

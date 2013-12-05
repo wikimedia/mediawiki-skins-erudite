@@ -1,8 +1,8 @@
 /* Hide navigation elements */
-#header-wrap,
+#top-wrap,
 #mw-js-message,
-.entry-meta,
-#footer-wrap {
+#nav-meta,
+#bottom-wrap {
 	display:none;
 }
 
