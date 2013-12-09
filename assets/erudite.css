@@ -140,20 +140,6 @@ td > h6:first-child {
 	margin-top: 0;
 }
 
-/* Links */
-a {
-	text-decoration: none;
-	color: #0000bb;
-}
-
-a:visited {
-	color: #330077;
-}
-
-a.new {
-	color: #cc0000;
-}
-
 /* Header */
 #top-wrap {
 	background-image: url(images/stripes.svg);
@@ -351,14 +337,34 @@ blockquote {
 	margin-right: auto;
 }
 
-/* Main Links */
-#bodyContent a {
+/* Links */
+a {
+	color: #0000bb;
+	text-decoration: none;
 	border-bottom: thin solid #aaaaaa;
 }
 
-#bodyContent a:hover,
-#bodyContent a:focus {
+a:hover,
+a:focus {
 	border-color: #555555;
+}
+
+a:visited {
+	color: #330077;
+}
+
+a.new {
+	color: #cc0000;
+}
+
+/* Links that are obvious from their design surroundings */
+#catlinks a,
+#footer a,
+#menu a,
+#top-wrap h1 a,
+.gallery a,
+.thumbinner > a {
+	border-bottom: none;
 }
 
 /* Meta (edit links etc.) */
@@ -431,13 +437,9 @@ ol.references > li:target {
 }
 
 /* Images */
-#bodyContent img {
+img {
 	padding: 0.25em;
 	margin-bottom: 0.5em;
-}
-
-#bodyContent .gallery a {
-	border-width: 0;
 }
 
 div.floatright,
@@ -482,10 +484,6 @@ img.thumbimage {
 	border: none;
 	padding: 0;
 	margin: 0;
-}
-
-.thumbinner > a {
-	border: none;
 }
 
 .thumbcaption {
