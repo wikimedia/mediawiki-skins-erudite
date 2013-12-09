@@ -59,19 +59,12 @@ class EruditeTemplate extends BaseTemplate {
 	public function execute() {
 		$this->html( 'headelement' );
 
-		if ( !isset( $this->data['sitename'] ) ) {
-			global $wgSitename;
-			$this->set( 'sitename', $wgSitename );
-		}
-
 		?>
 
-		<?php if( $this->data['showjumplinks'] ) { ?>
 		<div class="mw-jump">
 			<a href="#bodyContent"><?php $this->msg( 'erudite-skiptocontent' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
 			<a href="#search"><?php $this->msg( 'erudite-skiptosearch' ) ?></a>
 		</div>
-		<?php } ?>
 
 		<div id="top-wrap" role="banner">
 			<h1><a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" title="<?php $this->text( 'sitename' ); ?>" rel="home"><?php $this->text( 'sitename' ); ?></a></h1>
@@ -82,6 +75,10 @@ class EruditeTemplate extends BaseTemplate {
 			<?php
 				if( array_key_exists( 'navigation', $this->data['sidebar'] ) ) {
 					echo "<ul id='menu'>\n";
+					/* Reverse horizontally rendered menu items if rtl */
+					if( $this->data['rtl'] ) {
+						array_reverse( $this->data['sidebar']['navigation'] );
+					}
 					foreach( $this->data['sidebar']['navigation'] as $item ) {
 						printf( '<li id="menu-item-%s">', Sanitizer::escapeId( $item['id'] ) );
 						printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
@@ -264,7 +261,7 @@ class EruditeTemplate extends BaseTemplate {
 
 			</ul>
 		</div>
-		<div class="visualClear"></div>
+		<div style="clear: both"></div>
 
 		</div>
 		</div>
