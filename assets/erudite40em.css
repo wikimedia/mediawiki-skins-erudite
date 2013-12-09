@@ -1,6 +1,9 @@
 /* Reduce padding a bit further */
-#bodyContent {
-	padding: 1em 1em 0em;
+#bodyContent,
+.message *,
+#footer {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 /* Stack footer columns */
