@@ -75,10 +75,6 @@ class EruditeTemplate extends BaseTemplate {
 			<?php
 				if( array_key_exists( 'navigation', $this->data['sidebar'] ) ) {
 					echo "<ul id='menu'>\n";
-					/* Reverse horizontally rendered menu items if rtl */
-					if( $this->data['rtl'] ) {
-						array_reverse( $this->data['sidebar']['navigation'] );
-					}
 					foreach( $this->data['sidebar']['navigation'] as $item ) {
 						printf( '<li id="menu-item-%s">', Sanitizer::escapeId( $item['id'] ) );
 						printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
