@@ -31,7 +31,7 @@
 
 /* Stack top menu items */
 #menu:target li {
-	float: none !important;
+	float: none;
 	padding: 0em;
 	text-align: center;
 }

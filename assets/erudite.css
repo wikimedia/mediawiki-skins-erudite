@@ -238,6 +238,7 @@ td > h6:first-child {
 }
 
 .footer a,
+.footer a:visited,
 .footer a.new {
 	color: #ffffff;
 	border-bottom: thin solid #999999;
@@ -251,6 +252,7 @@ td > h6:first-child {
 }
 
 .footer li > a,
+.footer li > a:visited,
 .footer li > a.new {
 	border-color: #444444;
 }
