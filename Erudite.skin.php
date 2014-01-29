@@ -18,7 +18,7 @@ class SkinErudite extends SkinTemplate {
 		 * desktop dimensions, so they won't downscale and will instead respect
 		 * things like CSS's @media rules */
 		$out->addHeadItem( 'viewport',
-			'<meta name="viewport" content="width=device-width, initial-scale=1">'
+			'<meta name="viewport" content="width=device-width, initial-scale=1" />'
 		);
 	}
 
