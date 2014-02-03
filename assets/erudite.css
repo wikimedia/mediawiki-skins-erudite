@@ -153,6 +153,8 @@ td > h6:first-child {
 	text-decoration: none;
 	font-size: 2.25em;
 	line-height: 1;
+	/* make max-width roughly the same as 80em at standard font size */
+	max-width: 36em;
 }
 
 #top-wrap a,
@@ -162,6 +164,8 @@ td > h6:first-child {
 
 #tagline {
 	font-size: 0.875em;
+	/* make max-width roughly the same as 80em at standard font size */
+	max-width: 92em;
 }
 
 /* Menu */
