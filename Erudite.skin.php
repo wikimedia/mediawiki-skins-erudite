@@ -8,7 +8,7 @@
 
 class SkinErudite extends SkinTemplate {
 
-	var $skinname = 'erudite', $stylename = 'erudite',
+	public $skinname = 'erudite', $stylename = 'erudite',
 		$template = 'EruditeTemplate', $useHeadElement = true;
 
 	public function initPage( OutputPage $out ) {
