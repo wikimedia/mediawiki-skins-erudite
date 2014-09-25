@@ -271,6 +271,10 @@ td > h6:first-child {
 	margin-bottom: 0em;
 }
 
+#footer li {
+	list-style-position: inside;
+}
+
 /* Content */
 #bodyContent,
 .message *,
