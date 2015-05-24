@@ -22,20 +22,20 @@ $wgExtensionCredits['skin'][] = array(
 );
 
 $wgValidSkinNames['erudite'] = 'Erudite';
-$wgAutoloadClasses['SkinErudite'] = dirname(__FILE__) . '/Erudite.skin.php';
-$wgExtensionMessagesFiles['Erudite'] = dirname(__FILE__) . '/Erudite.i18n.php';
+$wgAutoloadClasses['SkinErudite'] = __DIR__ . '/Erudite.skin.php';
+$wgExtensionMessagesFiles['Erudite'] = __DIR__ . '/Erudite.i18n.php';
 
 $wgResourceModules['skins.erudite'] = array(
 	'styles' => array(
-		'erudite/assets/cssreset.css' => array( 'media' => 'screen' ),
-		'erudite/assets/erudite.css' => array( 'media' => 'screen' ),
-		'erudite/assets/erudite66em.css' => array( 'media' => 'screen and (max-width: 66em)' ),
-		'erudite/assets/erudite60em.css' => array( 'media' => 'screen and (max-width: 60em)' ),
-		'erudite/assets/erudite55em.css' => array( 'media' => 'screen and (max-width: 55em)' ),
-		'erudite/assets/erudite40em.css' => array( 'media' => 'screen and (max-width: 40em)' ),
-		'erudite/assets/erudite20em.css' => array( 'media' => 'screen and (max-width: 20em)' ),
-		'erudite/assets/print.css' => array( 'media' => 'print' ),
+		'assets/cssreset.css' => array( 'media' => 'screen' ),
+		'assets/erudite.css' => array( 'media' => 'screen' ),
+		'assets/erudite66em.css' => array( 'media' => 'screen and (max-width: 66em)' ),
+		'assets/erudite60em.css' => array( 'media' => 'screen and (max-width: 60em)' ),
+		'assets/erudite55em.css' => array( 'media' => 'screen and (max-width: 55em)' ),
+		'assets/erudite40em.css' => array( 'media' => 'screen and (max-width: 40em)' ),
+		'assets/erudite20em.css' => array( 'media' => 'screen and (max-width: 20em)' ),
+		'assets/print.css' => array( 'media' => 'print' ),
 	),
-	'remoteBasePath' => &$GLOBALS['wgStylePath'],
-	'localBasePath' => &$GLOBALS['wgStyleDirectory'],
+	'remoteSkinPath' => 'erudite',
+	'localBasePath' => __DIR__,
 );
