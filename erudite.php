@@ -17,14 +17,13 @@ $wgExtensionCredits['skin'][] = array(
 	'name' => 'Erudite',
 	'url' => 'https://www.mediawiki.org/wiki/Skin:Erudite',
 	'author' => array( 'Nick White', 'Matt Wiebe', 'Colin Andrew Ferm' ),
-	'version' => '1.8',
+	'version' => '1.9',
 	'descriptionmsg' => 'erudite-desc',
 );
 
 $wgValidSkinNames['erudite'] = 'Erudite';
 $wgAutoloadClasses['SkinErudite'] = __DIR__ . '/Erudite.skin.php';
-$wgExtensionMessagesFiles['Erudite'] = __DIR__ . '/Erudite.i18n.php';
-
+$wgMessagesDirs['Erudite'] = __DIR__ . '/i18n';
 $wgResourceModules['skins.erudite'] = array(
 	'styles' => array(
 		'assets/cssreset.css' => array( 'media' => 'screen' ),
