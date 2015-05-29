@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3c068cd2",
+        "filename": "skin.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-29T15:27:15Z",
+      "side": 1,
+      "message": "+ manifest_version ?",
+      "revId": "1bc53c7841417bc9ccfc582082c0441bba3c0233",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
