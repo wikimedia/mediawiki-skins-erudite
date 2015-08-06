@@ -208,7 +208,7 @@ class EruditeTemplate extends BaseTemplate {
 					foreach ( $this->getToolbox() as $key => $tbitem ) {
 						echo $this->makeListItem( $key, $tbitem );
 					}
-					wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );
+					Hooks::run( 'SkinTemplateToolboxEnd', array( &$this ) );
 				?>
 				</ul>
 			</li>
