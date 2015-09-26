@@ -10,7 +10,8 @@
 	"descriptionmsg": "erudite-desc",
 	"type": "skin",
 	"AutoloadClasses": {
-		"SkinErudite": "Erudite.skin.php"
+		"SkinErudite": "Erudite.skin.php",
+		"EruditeTemplate": "Erudite.skin.php"
 	},
 	"MessagesDirs": {
 		"Erudite": [
