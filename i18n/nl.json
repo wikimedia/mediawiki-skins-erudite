@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Esketti"
+			"Esketti",
+			"Siebrand"
 		]
 	},
-	"erudite-desc": "Een schoon en gemakkelijk te lezen huid.",
+	"erudite-desc": "Een schone en gemakkelijk te lezen uiterlijk",
 	"erudite-skiptocontent": "Doorgaan naar inhoud",
-	"erudite-skiptosearch": "Spring naar zoeken",
+	"erudite-skiptosearch": "Doorgaan naar zoeken",
 	"erudite-action-addsection": "Onderwerp toevoegen"
 }
