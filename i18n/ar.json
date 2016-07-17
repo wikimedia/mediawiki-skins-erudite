@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Maroen1990"
+			"Maroen1990",
+			"علاء"
 		]
 	},
 	"erudite-skiptocontent": "انتقل إلى المحتوي",
 	"erudite-skiptosearch": "انتقل الى البحث",
-	"erudite-action-addsection": "أضف موضوعا"
+	"erudite-action-addsection": "أضف موضوعاً"
 }
