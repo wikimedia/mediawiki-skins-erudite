@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Jopparn"
 		]
 	},
 	"skinname-erudite": "Erudite",
-	"erudite-desc": "En rent och lättläst utseende.",
+	"erudite-desc": "Ett rent och lättläst utseende.",
 	"erudite-skiptocontent": "Hoppa till innehåll",
 	"erudite-skiptosearch": "Hoppa till sök",
 	"erudite-action-addsection": "Lägg till ämne"
