@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Kghbln"
 		]
 	},
 	"skinname-erudite": "Erudite",
-	"erudite-desc": "Eine saubere und einfach zu lesende Benutzeroberfläche",
+	"erudite-desc": "Stellt eine saubere und einfach zu lesende Benutzeroberfläche bereit",
 	"erudite-skiptocontent": "Zum Inhalt springen",
 	"erudite-skiptosearch": "Zur Suche springen",
 	"erudite-action-addsection": "Thema hinzufügen"
