@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Maroen1990",
-			"علاء"
+			"علاء",
+			"ديفيد"
 		]
 	},
+	"erudite-desc": "برنامج مساعد نظيف وسهل القراءة",
 	"erudite-skiptocontent": "انتقل إلى المحتوي",
 	"erudite-skiptosearch": "انتقل الى البحث",
 	"erudite-action-addsection": "أضف موضوعاً"
