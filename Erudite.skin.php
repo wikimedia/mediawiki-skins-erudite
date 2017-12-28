@@ -208,7 +208,9 @@ class EruditeTemplate extends BaseTemplate {
 					foreach ( $this->getToolbox() as $key => $tbitem ) {
 						echo $this->makeListItem( $key, $tbitem );
 					}
-					Hooks::run( 'SkinTemplateToolboxEnd', array( &$this ) );
+					// Avoid PHP 7.1 warning of passing $this by reference
+					$skin = $this;
+					Hooks::run( 'SkinTemplateToolboxEnd', array( &$skin ) );
 				?>
 				</ul>
 			</li>
