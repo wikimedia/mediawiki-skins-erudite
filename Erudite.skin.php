@@ -155,7 +155,7 @@ class EruditeTemplate extends BaseTemplate {
 					<div>
 						<?php echo $this->makeSearchInput( array( 'type' => 'text', 'id' => 's' ) ); ?>
 						<?php echo $this->makeSearchButton( 'go', array(
-							'value' => $this->translator->translate( 'searchbutton' ),
+							'value' => wfMessage( 'searchbutton' )->text(),
 							'class' => "searchButton",
 							'id'    => "searchsubmit",
 						) ); ?>
