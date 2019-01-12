@@ -38,7 +38,8 @@ class EruditeTemplate extends BaseTemplate {
 	 * Needed for Mediawiki 1.19 & 1.20 due to bug 36975:
 	 * https://bugzilla.wikimedia.org/show_bug.cgi?id=36975
 	 *
-	 * @param $message Name of wikitext message to return
+	 * @param $message string Name of wikitext message to return
+	 * @return string
 	 */
 	function msgWikiNoEdit( $message ) {
 		global $wgOut;
@@ -219,10 +220,11 @@ class EruditeTemplate extends BaseTemplate {
 				foreach( $this->data['sidebar'] as $name => $menu ) {
 					/* standard menus are already handled elsewhere */
 					if( empty($menu) ||
-					    $name == 'navigation' ||
-					    $name == 'SEARCH' ||
-					    $name == 'LANGUAGES' ||
-					    $name == 'TOOLBOX' ) {
+						$name == 'navigation' ||
+						$name == 'SEARCH' ||
+						$name == 'LANGUAGES' ||
+						$name == 'TOOLBOX'
+					) {
 						continue;
 					}
 					echo "<li class='widget'>";
@@ -232,8 +234,9 @@ class EruditeTemplate extends BaseTemplate {
 					echo "<ul>\n";
 					foreach( $menu as $item ) {
 						printf( '<li><a href="%s">%s</a></li>' . "\n",
-						        htmlspecialchars( $item['href'] ),
-						        htmlspecialchars( $item['text'] ) );
+							htmlspecialchars( $item['href'] ),
+							htmlspecialchars( $item['text'] )
+						);
 					}
 					echo "</ul></li>\n";
 				}
