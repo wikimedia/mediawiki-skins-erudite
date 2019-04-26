@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"McSalama"
+			"McSalama",
+			"Pyscowicz"
 		]
 	},
-	"erudite-desc": "Puhdas ja helppolukuinen teema.",
+	"erudite-desc": "Puhdas ja helppolukuinen ulkoasu",
 	"erudite-skiptocontent": "Siirry sisältöön",
 	"erudite-skiptosearch": "Siirry hakuun",
 	"erudite-action-addsection": "Lisää aihe"
