@@ -46,9 +46,8 @@ class EruditeTemplate extends BaseTemplate {
 		global $wgParser;
 
 		$popts = new ParserOptions();
-		$popts->setEditSection( false );
 		$text = wfMessage( $message )->text();
-		return $wgParser->parse( $text, $wgOut->getTitle(), $popts )->getText();
+		return $wgParser->parse( $text, $wgOut->getTitle(), $popts )->getText( [ 'enableSectionEditLinks' => false ] );
 	}
 
 	/**
