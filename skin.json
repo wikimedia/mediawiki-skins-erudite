@@ -20,6 +20,7 @@
 	},
 	"ResourceModules": {
 		"skins.erudite": {
+			"class": "ResourceLoaderSkinModule",
 			"styles": {
 				"assets/cssreset.css": {
 					"media": "screen"
