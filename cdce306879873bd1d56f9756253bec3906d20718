@@ -22,6 +22,30 @@
       "revId": "cdce306879873bd1d56f9756253bec3906d20718",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a70c55c_0186b597",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2020-03-13T18:14:14Z",
+      "side": 1,
+      "message": "Can you amend my commit message to something that reads better?\n\nThis message was based on my commit for the webplatform extension which seems to be a standalone skin that only ever serves English content on https://webplatform.github.io/ and is discontinued.",
+      "parentUuid": "a784ce60_6f9d855d",
+      "range": {
+        "startLine": 14,
+        "startChar": 51,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "cdce306879873bd1d56f9756253bec3906d20718",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
