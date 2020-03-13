@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a34a461b_c2fce130",
+        "filename": "skin.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2020-03-13T23:29:23Z",
+      "side": 1,
+      "message": "per IRC, I think we may want to be explicit here and specify features:[\u0027legacy\u0027].\n\nThat way it\u0027s much easier to change things in the future, and it means new skins don\u0027t start with legacy styles by default (possibly by accident etc, unaware dependencies).",
+      "range": {
+        "startLine": 23,
+        "startChar": 3,
+        "endLine": 23,
+        "endChar": 39
+      },
+      "revId": "289dc5150ad094c80e1b3d8eb617e8bf75ca1021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
