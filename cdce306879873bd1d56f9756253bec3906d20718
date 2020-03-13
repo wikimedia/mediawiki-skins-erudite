@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a784ce60_6f9d855d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2020-03-13T02:42:24Z",
+      "side": 1,
+      "message": "This is in contradiction with our core principles. We never (intentionally) invest in software that isn\u0027t localised. I understand the perf overhead, but this is a core value I can\u0027t ignore, and would prefer not to spread in this manner to others as something we\u0027re okay with or even consider.",
+      "range": {
+        "startLine": 14,
+        "startChar": 51,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "cdce306879873bd1d56f9756253bec3906d20718",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
