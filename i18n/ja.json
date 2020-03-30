@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Otokoume",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Shirayuki"
 		]
 	},
-	"erudite-desc": "きれいで読みやすいスキン",
+	"erudite-desc": "きれいで読みやすい外装",
 	"erudite-skiptocontent": "コンテンツにスキップ",
 	"erudite-skiptosearch": "検索にスキップ",
 	"erudite-action-addsection": "話題を追加"
