@@ -8,6 +8,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Erudite",
 	"descriptionmsg": "erudite-desc",
+	"namemsg": "skinname-erudite",
 	"type": "skin",
 	"AutoloadClasses": {
 		"SkinErudite": "Erudite.skin.php",
