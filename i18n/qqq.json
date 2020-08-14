@@ -6,7 +6,7 @@
 			"Umherirrender"
 		]
 	},
-	"skinname-erudite": "Skin name",
+	"skinname-erudite": "{{name}}",
 	"erudite-desc": "{{desc|name=Erudite|url=https://www.mediawiki.org/wiki/Skin:Erudite|what=skin}}",
 	"erudite-skiptocontent": "Link to skip directly to the content on the page",
 	"erudite-skiptosearch": "Link to skip directly to the search box on the page",
