@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"MuratTheTurkish"
 		]
 	},
 	"erudite-desc": "Temiz ve okunması kolay bir görünüm",
-	"erudite-skiptocontent": "İçeriğe geç",
+	"erudite-skiptocontent": "İçeriğe atla",
 	"erudite-skiptosearch": "Aramaya geç",
 	"erudite-action-addsection": "Konu ekle"
 }
