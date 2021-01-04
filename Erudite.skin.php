@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Erudite skin
  *
@@ -17,17 +18,10 @@ class SkinErudite extends SkinTemplate {
 		/* Assures mobile devices that the site doesn't assume traditional
 		 * desktop dimensions, so they won't downscale and will instead respect
 		 * things like CSS's @media rules */
+		// Can be replaced in 1.36 with the `responsive` option.
 		$out->addHeadItem( 'viewport',
 			'<meta name="viewport" content="width=device-width, initial-scale=1" />'
 		);
-	}
-
-	/**
-	 * @param $out OutputPage object
-	 */
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
-		$out->addModuleStyles( 'skins.erudite' );
 	}
 }
 
@@ -43,7 +37,7 @@ class EruditeTemplate extends BaseTemplate {
 	 */
 	function msgWikiNoEdit( $message ) {
 		global $wgOut;
-		global $wgParser;
+		$wgParser = MediaWiki\MediaWikiServices::getInstance()->getParser();
 
 		$popts = new ParserOptions( $this->getSkin()->getUser() );
 		$text = wfMessage( $message )->text();
@@ -77,7 +71,7 @@ class EruditeTemplate extends BaseTemplate {
 				if( array_key_exists( 'navigation', $this->data['sidebar'] ) ) {
 					echo "<ul id='menu'>\n";
 					foreach( $this->data['sidebar']['navigation'] as $item ) {
-						printf( '<li id="menu-item-%s">', Sanitizer::escapeId( $item['id'] ) );
+						printf( '<li id="menu-item-%s">', Sanitizer::escapeIdForAttribute( $item['id'] ) );
 						printf( '<a href="%s">%s</a>', htmlspecialchars( $item['href'] ), htmlspecialchars( $item['text'] ) );
 						echo "</li>\n";
 					}
@@ -206,7 +200,8 @@ class EruditeTemplate extends BaseTemplate {
 				<h3><?php $this->msg( 'toolbox' ) ?></h3>
 				<ul>
 				<?php
-					foreach ( $this->getToolbox() as $key => $tbitem ) {
+					$toolbox = $this->get('sidebar')['TOOLBOX'];
+					foreach ( $toolbox as $key => $tbitem ) {
 						echo $this->makeListItem( $key, $tbitem );
 					}
 					// Avoid PHP 7.1 warning of passing $this by reference
@@ -235,7 +230,7 @@ class EruditeTemplate extends BaseTemplate {
 					foreach( $menu as $item ) {
 						printf( '<li><a href="%s">%s</a></li>' . "\n",
 							htmlspecialchars( $item['href'] ),
-							htmlspecialchars( $item['text'] )
+							htmlspecialchars( $item['text'] ?? '' )
 						);
 					}
 					echo "</ul></li>\n";

@@ -623,6 +623,9 @@ div.searchresult {
 }
 
 .mw-jump {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 	position: absolute;
 	top: 1em;
 	left: 1em;
