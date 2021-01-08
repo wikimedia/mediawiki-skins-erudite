@@ -14,6 +14,9 @@
 		"SkinErudite": "Erudite.skin.php",
 		"EruditeTemplate": "Erudite.skin.php"
 	},
+	"requires": {
+			"MediaWiki": ">= 1.35.0"
+	},
 	"MessagesDirs": {
 		"Erudite": [
 			"i18n"
@@ -55,7 +58,16 @@
 		"remoteSkinPath": "erudite"
 	},
 	"ValidSkinNames": {
-		"erudite": "Erudite"
+		"erudite": {
+			"class": "SkinErudite",
+			"args": [
+				{
+					"name": "erudite",
+					"template": "EruditeTemplate",
+					"styles": [ "skins.erudite" ]
+				}
+			]
+		}
 	},
 	"manifest_version": 1
 }
