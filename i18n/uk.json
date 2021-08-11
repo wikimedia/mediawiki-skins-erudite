@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alex Khimich"
+			"Alex Khimich",
+			"DDPAT"
 		]
 	},
+	"skinname-erudite": "Ерудит",
 	"erudite-desc": "Легка та зручна для читання тема.",
 	"erudite-skiptocontent": "Перейти до змісту",
 	"erudite-skiptosearch": "Перейти до пошуку",
