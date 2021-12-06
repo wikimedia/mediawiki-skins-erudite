@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"erudite-desc": "Koža, ki je čista in enostavna za branje",
+	"erudite-desc": "Elegantna preobleka, ki omogoča lahko branje",
 	"erudite-skiptocontent": "Preskoči na vsebino",
 	"erudite-skiptosearch": "Preskoči na iskanje",
 	"erudite-action-addsection": "Dodaj temo"
