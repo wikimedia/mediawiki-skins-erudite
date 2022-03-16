@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beginneruser",
 			"Reza1615"
 		]
 	},
 	"erudite-desc": "خواندن پوسته به راحتی و آسانی.",
 	"erudite-skiptocontent": "پرش به محتوا",
 	"erudite-skiptosearch": "پرش به جستجو",
-	"erudite-action-addsection": "افزودن بخش"
+	"erudite-action-addsection": "افزودن بحث"
 }
