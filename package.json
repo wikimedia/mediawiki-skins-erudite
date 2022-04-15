@@ -1,4 +1,5 @@
 {
+	"name": "erudite",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
