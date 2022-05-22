@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f75e2f47_b9e40b5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2022-05-22T01:16:53Z",
+      "side": 1,
+      "message": "resubmit, not sure why jenkins thought there was a merge conflict",
+      "revId": "e7eace45e9810cfd615cb23de5213245b3f96ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951"
+    }
+  ]
+}
