@@ -15,7 +15,7 @@
 		"EruditeTemplate": "Erudite.skin.php"
 	},
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"MessagesDirs": {
 		"Erudite": [
@@ -62,6 +62,7 @@
 			"class": "SkinErudite",
 			"args": [
 				{
+					"bodyOnly": true,
 					"name": "erudite",
 					"template": "EruditeTemplate",
 					"styles": [

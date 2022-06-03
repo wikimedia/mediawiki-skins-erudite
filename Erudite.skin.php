@@ -52,8 +52,6 @@ class EruditeTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
-		$this->html( 'headelement' );
-
 		?>
 
 		<div class="mw-jump">
@@ -261,11 +259,6 @@ class EruditeTemplate extends BaseTemplate {
 
 		</div>
 		</div>
-
-		<?php $this->printTrail(); ?>
-
-		</body>
-		</html>
 		<?php
 	}
 }
