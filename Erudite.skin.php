@@ -7,6 +7,8 @@
  * @ingroup Skins
  */
 
+use MediaWiki\MediaWikiServices;
+
 class SkinErudite extends SkinTemplate {
 
 	public $skinname = 'erudite', $stylename = 'erudite',
@@ -204,7 +206,7 @@ class EruditeTemplate extends BaseTemplate {
 					}
 					// Avoid PHP 7.1 warning of passing $this by reference
 					$skin = $this;
-					Hooks::run( 'SkinTemplateToolboxEnd', array( &$skin ) );
+					MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', array( &$skin ) );
 				?>
 				</ul>
 			</li>
