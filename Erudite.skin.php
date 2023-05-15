@@ -38,12 +38,12 @@ class EruditeTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	function msgWikiNoEdit( $message ) {
-		global $wgOut;
-		$wgParser = MediaWiki\MediaWikiServices::getInstance()->getParser();
+		$parser = MediaWiki\MediaWikiServices::getInstance()->getParser();
+		$skin = $this->getSkin();
 
-		$popts = new ParserOptions( $this->getSkin()->getUser() );
-		$text = wfMessage( $message )->text();
-		return $wgParser->parse( $text, $wgOut->getTitle(), $popts )
+		$popts = ParserOptions::newFromContext( $skin->getContext() );
+		$text = $skin->msg( $message )->text();
+		return $parser->parse( $text, $skin->getTitle(), $popts )
 			->getText( [ 'enableSectionEditLinks' => false ] );
 	}
 
