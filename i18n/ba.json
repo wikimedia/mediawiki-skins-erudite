@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Sagan",
-			"Азат Хәлилов"
+			"Азат Хәлилов",
+			"З. ӘЙЛЕ"
 		]
 	},
-	"erudite-desc": "\nАсыҡ һәм уҡыуға ябай биҙәлеш темаһы",
-	"erudite-skiptocontent": "Йөкмәткегә күсеү",
-	"erudite-skiptosearch": "Эҙләүгә күсеү",
+	"erudite-desc": "Асыҡ һәм уҡыуға ябай биҙәлеш темаһы",
+	"erudite-skiptocontent": "Эстәлеккә күсергә",
+	"erudite-skiptosearch": "Эҙләүгә күсергә",
 	"erudite-action-addsection": "Тема өҫтәргә"
 }
