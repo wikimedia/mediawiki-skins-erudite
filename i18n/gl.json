@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Toliño"
 		]
 	},
+	"skinname-erudite": "Erudite",
 	"erudite-desc": "Unha aparencia sinxela e de doada lectura.",
 	"erudite-skiptocontent": "Saltar ó contido",
 	"erudite-skiptosearch": "Saltar á busca",
