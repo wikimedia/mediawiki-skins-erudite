@@ -24,7 +24,7 @@
 	},
 	"ResourceModules": {
 		"skins.erudite": {
-			"class": "ResourceLoaderSkinModule",
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
 			"styles": {
 				"assets/cssreset.css": {
 					"media": "screen"
