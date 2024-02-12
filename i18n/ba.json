@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bashkorttan",
 			"Sagan",
 			"Азат Хәлилов",
 			"З. ӘЙЛЕ"
@@ -9,5 +10,5 @@
 	"erudite-desc": "Асыҡ һәм уҡыуға ябай биҙәлеш темаһы",
 	"erudite-skiptocontent": "Эстәлеккә күсергә",
 	"erudite-skiptosearch": "Эҙләүгә күсергә",
-	"erudite-action-addsection": "Тема өҫтәргә"
+	"erudite-action-addsection": "Тема өҫтәү"
 }
