@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "781c86cd_455cf825",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2025-01-24T23:20:42Z",
+      "side": 1,
+      "message": "Did you mean to post this to the REL1_39 branch? This breaks master.",
+      "revId": "3cc9e867a791326fd17073a5989bf6b7b6f3a455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951"
+    }
+  ]
+}
