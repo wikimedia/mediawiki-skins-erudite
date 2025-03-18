@@ -7,6 +7,7 @@
  * @ingroup Skins
  */
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 
 class SkinErudite extends SkinTemplate {
