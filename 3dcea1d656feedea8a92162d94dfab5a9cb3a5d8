@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4abd975d_aa85791a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2025-03-20T16:05:55Z",
+      "side": 1,
+      "message": "Skin still fatals after this change. I will take a look:\n* Original exception: [bb1bbbfe0f4bbbdaf28d29fa] /w/index.php?title\u003dParis\u0026useskin\u003derudite TypeError: MediaWiki\\Parser\\Sanitizer::escapeIdForAttribute(): Argument #1 ($id) must be of type string, null given, called in /Users/jdlrobson/git/core/skins/erudite/Erudite.skin.php on line 75",
+      "revId": "3dcea1d656feedea8a92162d94dfab5a9cb3a5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951"
+    }
+  ]
+}
