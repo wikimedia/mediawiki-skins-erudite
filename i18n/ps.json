@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"erudite-desc": "يوه پاکه او د اسانه لوست وړ پوښۍ.",
 	"erudite-skiptocontent": "مېنځپانگې ته ورتېرېدل",
 	"erudite-skiptosearch": "پلټنې ته ورتېرېدل",
-	"erudite-action-addsection": "سرليک ورگډول"
+	"erudite-action-addsection": "سکالو ورگډول"
 }
