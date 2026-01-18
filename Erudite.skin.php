@@ -45,7 +45,8 @@ class EruditeTemplate extends BaseTemplate {
 		$popts = ParserOptions::newFromContext( $skin->getContext() );
 		$text = $skin->msg( $message )->text();
 		return $parser->parse( $text, $skin->getTitle(), $popts )
-			->getText( [ 'enableSectionEditLinks' => false ] );
+			->runOutputPipeline( $popts, [ 'enableSectionEditLinks' => false ] )
+			->getContentHolderText();
 	}
 
 	/**
