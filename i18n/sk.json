@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"skinname-erudite": "Erudite",
+	"erudite-desc": "Čistá a ľahko čitateľná téma vzhľadu",
+	"erudite-skiptocontent": "Preskočiť na obsah",
+	"erudite-skiptosearch": "Preskočiť na vyhľadávanie",
+	"erudite-action-addsection": "Pridať tému"
+}
