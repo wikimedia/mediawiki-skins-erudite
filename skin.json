@@ -15,7 +15,7 @@
 		"EruditeTemplate": "Erudite.skin.php"
 	},
 	"requires": {
-		"MediaWiki": ">= 1.43.0"
+		"MediaWiki": ">= 1.46"
 	},
 	"MessagesDirs": {
 		"Erudite": [
@@ -65,6 +65,16 @@
 					"bodyOnly": true,
 					"name": "erudite",
 					"template": "EruditeTemplate",
+					"menus": [
+						"associated-pages",
+						"views",
+						"actions",
+						"variants",
+						"user-menu",
+						"notifications",
+						"user-interface-preferences",
+						"user-page"
+					],
 					"styles": [
 						"skins.erudite"
 					]

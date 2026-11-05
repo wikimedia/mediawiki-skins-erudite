@@ -30,6 +30,43 @@ class SkinErudite extends SkinTemplate {
 
 class EruditeTemplate extends BaseTemplate {
 	/**
+	 * Backwards compatibility method to get personal tools the "classic" way that doesn't
+	 * trigger deprecation warnings (T422975).
+	 *
+	 * @return array
+	 */
+	private function getPersonalToolsClassic() {
+		$cNav = $this->get( 'content_navigation' );
+		$personalTools = array_merge(
+			$cNav['user-interface-preferences'],
+			$cNav['user-page'],
+			$cNav['notifications'],
+			$cNav['user-menu']
+		);
+
+		return $this->getSkin()->getPersonalToolsForMakeListItem( $personalTools );
+	}
+
+	/**
+	 * Backwards compatibility method to get content actions the "classic" way, merging
+	 * the non-personal menus from content_navigation (T423303).
+	 *
+	 * @return array
+	 */
+	private function getContentActionsClassic() {
+		$cNav = $this->get( 'content_navigation' );
+		$contentActions = [];
+		$menus = $this->getSkin()->getOptions()['menus'];
+		$contentActionMenus = array_diff( $menus, [
+			'user-menu', 'notifications', 'user-interface-preferences', 'user-page'
+		] );
+		foreach ( $contentActionMenus as $key ) {
+			$contentActions = array_merge( $contentActions, $cNav[$key] );
+		}
+		return $contentActions;
+	}
+
+	/**
 	 * Like msgWiki() but it ensures edit section links are never shown.
 	 *
 	 * Needed for Mediawiki 1.19 & 1.20 due to bug 36975:
@@ -97,7 +134,7 @@ class EruditeTemplate extends BaseTemplate {
 		<div id="main" role="main">
 			<div id="nav-meta">
 			<?php
-				foreach ( $this->data['content_actions'] as $key => $tab ) {
+				foreach ( $this->getContentActionsClassic() as $key => $tab ) {
 					echo $this->makeListItem( $key, $tab, array( 'tag' => 'span' ) );
 					echo '<span class="meta-sep">|</span>';
 				}
@@ -173,13 +210,13 @@ class EruditeTemplate extends BaseTemplate {
 				</li>
 			<?php } ?>
 
-			<?php if( $this->getPersonalTools() ) { ?>
+			<?php if( $this->getPersonalToolsClassic() ) { ?>
 			<li class="widget">
 				<h3><?php $this->msg( 'personaltools' ) ?></h3>
 				<div>
 					<ul>
 					<?php
-						foreach ( $this->getPersonalTools() as $key => $item ) {
+						foreach ( $this->getPersonalToolsClassic() as $key => $item ) {
 							echo $this->makeListItem( $key, $item );
 						}
 					?>
